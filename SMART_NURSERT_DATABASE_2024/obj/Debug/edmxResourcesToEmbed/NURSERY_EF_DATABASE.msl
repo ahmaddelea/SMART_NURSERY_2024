@@ -1,0 +1,314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SMART_NURSERY_2024ModelStoreContainer" CdmEntityContainer="SMART_NURSERY_2024Entities">
+    <EntitySetMapping Name="BOOK_TBL">
+      <EntityTypeMapping TypeName="SMART_NURSERY_2024Model.BOOK_TBL">
+        <MappingFragment StoreEntitySet="BOOK_TBL">
+          <ScalarProperty Name="BOOK_ID" ColumnName="BOOK_ID" />
+          <ScalarProperty Name="BOOK_CODE" ColumnName="BOOK_CODE" />
+          <ScalarProperty Name="BOOK_NAME" ColumnName="BOOK_NAME" />
+          <ScalarProperty Name="BOOK_PRICE" ColumnName="BOOK_PRICE" />
+          <ScalarProperty Name="BOOK_STATE" ColumnName="BOOK_STATE" />
+          <ScalarProperty Name="NOTES" ColumnName="NOTES" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CHILD_TBL">
+      <EntityTypeMapping TypeName="SMART_NURSERY_2024Model.CHILD_TBL">
+        <MappingFragment StoreEntitySet="CHILD_TBL">
+          <ScalarProperty Name="CLD_ID" ColumnName="CLD_ID" />
+          <ScalarProperty Name="CLD_CODE" ColumnName="CLD_CODE" />
+          <ScalarProperty Name="CLD_NAME" ColumnName="CLD_NAME" />
+          <ScalarProperty Name="CLD_P_DATE" ColumnName="CLD_P_DATE" />
+          <ScalarProperty Name="CLD_GEN" ColumnName="CLD_GEN" />
+          <ScalarProperty Name="CLD_LVL" ColumnName="CLD_LVL" />
+          <ScalarProperty Name="PAR_ID" ColumnName="PAR_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLASSES_TBL">
+      <EntityTypeMapping TypeName="SMART_NURSERY_2024Model.CLASSES_TBL">
+        <MappingFragment StoreEntitySet="CLASSES_TBL">
+          <ScalarProperty Name="CLS_ID" ColumnName="CLS_ID" />
+          <ScalarProperty Name="CLS_CODE" ColumnName="CLS_CODE" />
+          <ScalarProperty Name="CLS_NAME" ColumnName="CLS_NAME" />
+          <ScalarProperty Name="CLS_NANY" ColumnName="CLS_NANY" />
+          <ScalarProperty Name="SUBJ_ID" ColumnName="SUBJ_ID" />
+          <ScalarProperty Name="CLD_ID" ColumnName="CLD_ID" />
+          <ScalarProperty Name="CLS_STATE" ColumnName="CLS_STATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DEGREE_TBL">
+      <EntityTypeMapping TypeName="SMART_NURSERY_2024Model.DEGREE_TBL">
+        <MappingFragment StoreEntitySet="DEGREE_TBL">
+          <ScalarProperty Name="DEGREE_ID" ColumnName="DEGREE_ID" />
+          <ScalarProperty Name="DEGREE_CODE" ColumnName="DEGREE_CODE" />
+          <ScalarProperty Name="EVAL_ID" ColumnName="EVAL_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DRIVER_TBL">
+      <EntityTypeMapping TypeName="SMART_NURSERY_2024Model.DRIVER_TBL">
+        <MappingFragment StoreEntitySet="DRIVER_TBL">
+          <ScalarProperty Name="DRIVER_ID" ColumnName="DRIVER_ID" />
+          <ScalarProperty Name="DRIVER_CODE" ColumnName="DRIVER_CODE" />
+          <ScalarProperty Name="DRIVER_NAME" ColumnName="DRIVER_NAME" />
+          <ScalarProperty Name="EMP_ID" ColumnName="EMP_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DUES_TBL">
+      <EntityTypeMapping TypeName="SMART_NURSERY_2024Model.DUES_TBL">
+        <MappingFragment StoreEntitySet="DUES_TBL">
+          <ScalarProperty Name="DUES_ID" ColumnName="DUES_ID" />
+          <ScalarProperty Name="DUES_CODE" ColumnName="DUES_CODE" />
+          <ScalarProperty Name="DUES_NAME" ColumnName="DUES_NAME" />
+          <ScalarProperty Name="DUES_AMOUNT" ColumnName="DUES_AMOUNT" />
+          <ScalarProperty Name="DUES_PAY_DATE" ColumnName="DUES_PAY_DATE" />
+          <ScalarProperty Name="DUES_STATE" ColumnName="DUES_STATE" />
+          <ScalarProperty Name="CLD_ID" ColumnName="CLD_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EMP_ACCOUNT_TBL">
+      <EntityTypeMapping TypeName="SMART_NURSERY_2024Model.EMP_ACCOUNT_TBL">
+        <MappingFragment StoreEntitySet="EMP_ACCOUNT_TBL">
+          <ScalarProperty Name="ACC_ID" ColumnName="ACC_ID" />
+          <ScalarProperty Name="ACC_CODE" ColumnName="ACC_CODE" />
+          <ScalarProperty Name="ACC_DATE" ColumnName="ACC_DATE" />
+          <ScalarProperty Name="ACC_TIME" ColumnName="ACC_TIME" />
+          <ScalarProperty Name="ACC_PALANCE" ColumnName="ACC_PALANCE" />
+          <ScalarProperty Name="ACC_DISCOUNT" ColumnName="ACC_DISCOUNT" />
+          <ScalarProperty Name="ACC_OVER" ColumnName="ACC_OVER" />
+          <ScalarProperty Name="ACC_STATE" ColumnName="ACC_STATE" />
+          <ScalarProperty Name="ACC_NOTE" ColumnName="ACC_NOTE" />
+          <ScalarProperty Name="EMP_ID" ColumnName="EMP_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EMPLOYEE_TBL">
+      <EntityTypeMapping TypeName="SMART_NURSERY_2024Model.EMPLOYEE_TBL">
+        <MappingFragment StoreEntitySet="EMPLOYEE_TBL">
+          <ScalarProperty Name="EMP_ID" ColumnName="EMP_ID" />
+          <ScalarProperty Name="EMP_CODE" ColumnName="EMP_CODE" />
+          <ScalarProperty Name="EMP_NAME" ColumnName="EMP_NAME" />
+          <ScalarProperty Name="EMP_N_NAME" ColumnName="EMP_N_NAME" />
+          <ScalarProperty Name="EMP_TYPE" ColumnName="EMP_TYPE" />
+          <ScalarProperty Name="EMP_SAL" ColumnName="EMP_SAL" />
+          <ScalarProperty Name="EMP_WORK_HOUR" ColumnName="EMP_WORK_HOUR" />
+          <ScalarProperty Name="EMP_JOB_SYS" ColumnName="EMP_JOB_SYS" />
+          <ScalarProperty Name="EMP_EMPLOY_DATE" ColumnName="EMP_EMPLOY_DATE" />
+          <ScalarProperty Name="EMP_ADD" ColumnName="EMP_ADD" />
+          <ScalarProperty Name="EMP_MOB" ColumnName="EMP_MOB" />
+          <ScalarProperty Name="EMP_SOCIAL_STATE" ColumnName="EMP_SOCIAL_STATE" />
+          <ScalarProperty Name="EMP_DEPT" ColumnName="EMP_DEPT" />
+          <ScalarProperty Name="EMP_STATE" ColumnName="EMP_STATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EVALUATION_TBL">
+      <EntityTypeMapping TypeName="SMART_NURSERY_2024Model.EVALUATION_TBL">
+        <MappingFragment StoreEntitySet="EVALUATION_TBL">
+          <ScalarProperty Name="EVAL_ID" ColumnName="EVAL_ID" />
+          <ScalarProperty Name="EVAL_CODE" ColumnName="EVAL_CODE" />
+          <ScalarProperty Name="EVAL_DATE" ColumnName="EVAL_DATE" />
+          <ScalarProperty Name="EVAL_FINAL_DEGREE" ColumnName="EVAL_FINAL_DEGREE" />
+          <ScalarProperty Name="CLD_ID" ColumnName="CLD_ID" />
+          <ScalarProperty Name="SUBJ_PER_CLS_ID" ColumnName="SUBJ_PER_CLS_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EVENT_SUBS_TBL">
+      <EntityTypeMapping TypeName="SMART_NURSERY_2024Model.EVENT_SUBS_TBL">
+        <MappingFragment StoreEntitySet="EVENT_SUBS_TBL">
+          <ScalarProperty Name="EVT_SUBS_ID" ColumnName="EVT_SUBS_ID" />
+          <ScalarProperty Name="EVT_SUBS_CODE" ColumnName="EVT_SUBS_CODE" />
+          <ScalarProperty Name="EVT_SUBS_PRICE" ColumnName="EVT_SUBS_PRICE" />
+          <ScalarProperty Name="EVT_SUBS_PAY_DATE" ColumnName="EVT_SUBS_PAY_DATE" />
+          <ScalarProperty Name="EVT_SUBS_REQ" ColumnName="EVT_SUBS_REQ" />
+          <ScalarProperty Name="EVT_ID" ColumnName="EVT_ID" />
+          <ScalarProperty Name="CLD_ID" ColumnName="CLD_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EVENTS_TBL">
+      <EntityTypeMapping TypeName="SMART_NURSERY_2024Model.EVENTS_TBL">
+        <MappingFragment StoreEntitySet="EVENTS_TBL">
+          <ScalarProperty Name="EVT_ID" ColumnName="EVT_ID" />
+          <ScalarProperty Name="EVT_CODE" ColumnName="EVT_CODE" />
+          <ScalarProperty Name="EVT_NAME" ColumnName="EVT_NAME" />
+          <ScalarProperty Name="EVT_DATE" ColumnName="EVT_DATE" />
+          <ScalarProperty Name="EVT_CRAFT" ColumnName="EVT_CRAFT" />
+          <ScalarProperty Name="EVT_PIC1" ColumnName="EVT_PIC1" />
+          <ScalarProperty Name="EVT_PIC2" ColumnName="EVT_PIC2" />
+          <ScalarProperty Name="CLD_ID" ColumnName="CLD_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FATHER_INFO_TBL">
+      <EntityTypeMapping TypeName="SMART_NURSERY_2024Model.FATHER_INFO_TBL">
+        <MappingFragment StoreEntitySet="FATHER_INFO_TBL">
+          <ScalarProperty Name="FATHER_ID" ColumnName="FATHER_ID" />
+          <ScalarProperty Name="FATHER_CODE" ColumnName="FATHER_CODE" />
+          <ScalarProperty Name="FATHER_NAME" ColumnName="FATHER_NAME" />
+          <ScalarProperty Name="FATHER_SSID" ColumnName="FATHER_SSID" />
+          <ScalarProperty Name="FATHER_MOB" ColumnName="FATHER_MOB" />
+          <ScalarProperty Name="FATHER_JOB" ColumnName="FATHER_JOB" />
+          <ScalarProperty Name="FATHER_EMAIL" ColumnName="FATHER_EMAIL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MONTHLY_SUBS_TBL">
+      <EntityTypeMapping TypeName="SMART_NURSERY_2024Model.MONTHLY_SUBS_TBL">
+        <MappingFragment StoreEntitySet="MONTHLY_SUBS_TBL">
+          <ScalarProperty Name="M_SUBS_ID" ColumnName="M_SUBS_ID" />
+          <ScalarProperty Name="M_SUBS_CODE" ColumnName="M_SUBS_CODE" />
+          <ScalarProperty Name="M_SUBS_CONST_AMOUNT" ColumnName="M_SUBS_CONST_AMOUNT" />
+          <ScalarProperty Name="M_SUBS_TOTAL" ColumnName="M_SUBS_TOTAL" />
+          <ScalarProperty Name="M_SUBS_PAY_DATE" ColumnName="M_SUBS_PAY_DATE" />
+          <ScalarProperty Name="M_SUBS_STATE" ColumnName="M_SUBS_STATE" />
+          <ScalarProperty Name="CLD_ID" ColumnName="CLD_ID" />
+          <ScalarProperty Name="SUB_SUBS_ID" ColumnName="SUB_SUBS_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MOTHER_INFO_TBL">
+      <EntityTypeMapping TypeName="SMART_NURSERY_2024Model.MOTHER_INFO_TBL">
+        <MappingFragment StoreEntitySet="MOTHER_INFO_TBL">
+          <ScalarProperty Name="MOTHER_ID" ColumnName="MOTHER_ID" />
+          <ScalarProperty Name="MOTHER_CODE" ColumnName="MOTHER_CODE" />
+          <ScalarProperty Name="MOTHER_NAME" ColumnName="MOTHER_NAME" />
+          <ScalarProperty Name="MOTHER_SSID" ColumnName="MOTHER_SSID" />
+          <ScalarProperty Name="MOTHER_MOB" ColumnName="MOTHER_MOB" />
+          <ScalarProperty Name="MOTHER_JOB" ColumnName="MOTHER_JOB" />
+          <ScalarProperty Name="MOTHER_EMAIL" ColumnName="MOTHER_EMAIL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ORDER_TBL">
+      <EntityTypeMapping TypeName="SMART_NURSERY_2024Model.ORDER_TBL">
+        <MappingFragment StoreEntitySet="ORDER_TBL">
+          <ScalarProperty Name="ORDER_ID" ColumnName="ORDER_ID" />
+          <ScalarProperty Name="ORDER_CODE" ColumnName="ORDER_CODE" />
+          <ScalarProperty Name="ORDER_TYPE" ColumnName="ORDER_TYPE" />
+          <ScalarProperty Name="ORDER_QTY" ColumnName="ORDER_QTY" />
+          <ScalarProperty Name="ORDER_DATE" ColumnName="ORDER_DATE" />
+          <ScalarProperty Name="ORDER_TIME" ColumnName="ORDER_TIME" />
+          <ScalarProperty Name="ORDER_TOTAL_PRICE" ColumnName="ORDER_TOTAL_PRICE" />
+          <ScalarProperty Name="IS_NEW_CLD" ColumnName="IS_NEW_CLD" />
+          <ScalarProperty Name="IS_MISSED" ColumnName="IS_MISSED" />
+          <ScalarProperty Name="CLD_ID" ColumnName="CLD_ID" />
+          <ScalarProperty Name="BOOK_ID" ColumnName="BOOK_ID" />
+          <ScalarProperty Name="UNIFORM_ID" ColumnName="UNIFORM_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PARENT_INFO_TBL">
+      <EntityTypeMapping TypeName="SMART_NURSERY_2024Model.PARENT_INFO_TBL">
+        <MappingFragment StoreEntitySet="PARENT_INFO_TBL">
+          <ScalarProperty Name="PAR_ID" ColumnName="PAR_ID" />
+          <ScalarProperty Name="PAR_CODE" ColumnName="PAR_CODE" />
+          <ScalarProperty Name="PAR_NAME" ColumnName="PAR_NAME" />
+          <ScalarProperty Name="FATHER_ID" ColumnName="FATHER_ID" />
+          <ScalarProperty Name="MOTHER_ID" ColumnName="MOTHER_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SUB_SUBSCRIPTION_TBL">
+      <EntityTypeMapping TypeName="SMART_NURSERY_2024Model.SUB_SUBSCRIPTION_TBL">
+        <MappingFragment StoreEntitySet="SUB_SUBSCRIPTION_TBL">
+          <ScalarProperty Name="SUB_SUBS_ID" ColumnName="SUB_SUBS_ID" />
+          <ScalarProperty Name="SUB_SUBS_CODE" ColumnName="SUB_SUBS_CODE" />
+          <ScalarProperty Name="SUB_SUBS_NAME" ColumnName="SUB_SUBS_NAME" />
+          <ScalarProperty Name="SUB_SUBS_AMOUNT" ColumnName="SUB_SUBS_AMOUNT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SUBJECT_PER_CLASS_TBL">
+      <EntityTypeMapping TypeName="SMART_NURSERY_2024Model.SUBJECT_PER_CLASS_TBL">
+        <MappingFragment StoreEntitySet="SUBJECT_PER_CLASS_TBL">
+          <ScalarProperty Name="SUBJ_PER_CLS_ID" ColumnName="SUBJ_PER_CLS_ID" />
+          <ScalarProperty Name="SUBJ_PER_CLS_CODE" ColumnName="SUBJ_PER_CLS_CODE" />
+          <ScalarProperty Name="SUBJ_PER_CLS_DATE" ColumnName="SUBJ_PER_CLS_DATE" />
+          <ScalarProperty Name="SUBJ_PER_CLS_TIME" ColumnName="SUBJ_PER_CLS_TIME" />
+          <ScalarProperty Name="CLS_ID" ColumnName="CLS_ID" />
+          <ScalarProperty Name="SUBJ_ID" ColumnName="SUBJ_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SUBJECT_TBL">
+      <EntityTypeMapping TypeName="SMART_NURSERY_2024Model.SUBJECT_TBL">
+        <MappingFragment StoreEntitySet="SUBJECT_TBL">
+          <ScalarProperty Name="SUBJ_ID" ColumnName="SUBJ_ID" />
+          <ScalarProperty Name="SUBJ_CODE" ColumnName="SUBJ_CODE" />
+          <ScalarProperty Name="SUBJ_NAME" ColumnName="SUBJ_NAME" />
+          <ScalarProperty Name="SUBJ_LVL" ColumnName="SUBJ_LVL" />
+          <ScalarProperty Name="SUBJ_STATE" ColumnName="SUBJ_STATE" />
+          <ScalarProperty Name="TEACHER_ID" ColumnName="TEACHER_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TEACHER_TBL">
+      <EntityTypeMapping TypeName="SMART_NURSERY_2024Model.TEACHER_TBL">
+        <MappingFragment StoreEntitySet="TEACHER_TBL">
+          <ScalarProperty Name="TEACHER_ID" ColumnName="TEACHER_ID" />
+          <ScalarProperty Name="TEACHER_NAME" ColumnName="TEACHER_NAME" />
+          <ScalarProperty Name="EMP_ID" ColumnName="EMP_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UNIFORM_TBL">
+      <EntityTypeMapping TypeName="SMART_NURSERY_2024Model.UNIFORM_TBL">
+        <MappingFragment StoreEntitySet="UNIFORM_TBL">
+          <ScalarProperty Name="UNIFORM_ID" ColumnName="UNIFORM_ID" />
+          <ScalarProperty Name="UNIFORM_CODE" ColumnName="UNIFORM_CODE" />
+          <ScalarProperty Name="UNIFORM_TYPE" ColumnName="UNIFORM_TYPE" />
+          <ScalarProperty Name="UNIFORM_SIZE" ColumnName="UNIFORM_SIZE" />
+          <ScalarProperty Name="UNIFORM_PRICE" ColumnName="UNIFORM_PRICE" />
+          <ScalarProperty Name="UNIFORM_STATE" ColumnName="UNIFORM_STATE" />
+          <ScalarProperty Name="NOTES" ColumnName="NOTES" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USERS_TBL">
+      <EntityTypeMapping TypeName="SMART_NURSERY_2024Model.USERS_TBL">
+        <MappingFragment StoreEntitySet="USERS_TBL">
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="USER_CODE" ColumnName="USER_CODE" />
+          <ScalarProperty Name="USER_NAME" ColumnName="USER_NAME" />
+          <ScalarProperty Name="USER_PASSWORD" ColumnName="USER_PASSWORD" />
+          <ScalarProperty Name="USER_TYPE" ColumnName="USER_TYPE" />
+          <ScalarProperty Name="EMP_ID" ColumnName="EMP_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VEHICLE_TBL">
+      <EntityTypeMapping TypeName="SMART_NURSERY_2024Model.VEHICLE_TBL">
+        <MappingFragment StoreEntitySet="VEHICLE_TBL">
+          <ScalarProperty Name="VEHICLE_ID" ColumnName="VEHICLE_ID" />
+          <ScalarProperty Name="VEHICLE_CODE" ColumnName="VEHICLE_CODE" />
+          <ScalarProperty Name="VEHICLE_NAME" ColumnName="VEHICLE_NAME" />
+          <ScalarProperty Name="VEHICLE_NO" ColumnName="VEHICLE_NO" />
+          <ScalarProperty Name="VEHICLE_PATH" ColumnName="VEHICLE_PATH" />
+          <ScalarProperty Name="DRIVER_ID" ColumnName="DRIVER_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VISIT_TBL">
+      <EntityTypeMapping TypeName="SMART_NURSERY_2024Model.VISIT_TBL">
+        <MappingFragment StoreEntitySet="VISIT_TBL">
+          <ScalarProperty Name="VST_ID" ColumnName="VST_ID" />
+          <ScalarProperty Name="VST_CODE" ColumnName="VST_CODE" />
+          <ScalarProperty Name="VSTR_NAME" ColumnName="VSTR_NAME" />
+          <ScalarProperty Name="VSTR_SSID" ColumnName="VSTR_SSID" />
+          <ScalarProperty Name="VSTR_MOB" ColumnName="VSTR_MOB" />
+          <ScalarProperty Name="VST_PRPS" ColumnName="VST_PRPS" />
+          <ScalarProperty Name="VST_DATE" ColumnName="VST_DATE" />
+          <ScalarProperty Name="VST_TIME" ColumnName="VST_TIME" />
+          <ScalarProperty Name="CLD_ID" ColumnName="CLD_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

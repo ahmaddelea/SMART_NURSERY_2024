@@ -1,0 +1,714 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SMART_NURSERY_2024Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BOOK_TBL">
+    <Key>
+      <PropertyRef Name="BOOK_ID" />
+    </Key>
+    <Property Name="BOOK_ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BOOK_CODE" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="BOOK_NAME" Type="varchar(max)" />
+    <Property Name="BOOK_PRICE" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="BOOK_STATE" Type="bit" />
+    <Property Name="NOTES" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="CHILD_TBL">
+    <Key>
+      <PropertyRef Name="CLD_ID" />
+    </Key>
+    <Property Name="CLD_ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CLD_CODE" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="CLD_NAME" Type="varbinary" MaxLength="100" />
+    <Property Name="CLD_P_DATE" Type="date" />
+    <Property Name="CLD_GEN" Type="varchar(max)" />
+    <Property Name="CLD_LVL" Type="varchar(max)" />
+    <Property Name="PAR_ID" Type="numeric" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="CLASSES_TBL">
+    <Key>
+      <PropertyRef Name="CLS_ID" />
+    </Key>
+    <Property Name="CLS_ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CLS_CODE" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="CLS_NAME" Type="varchar" MaxLength="100" />
+    <Property Name="CLS_NANY" Type="varchar(max)" />
+    <Property Name="SUBJ_ID" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="CLD_ID" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="CLS_STATE" Type="bit" />
+  </EntityType>
+  <EntityType Name="DEGREE_TBL">
+    <Key>
+      <PropertyRef Name="DEGREE_ID" />
+    </Key>
+    <Property Name="DEGREE_ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DEGREE_CODE" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="EVAL_ID" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DRIVER_TBL">
+    <Key>
+      <PropertyRef Name="DRIVER_ID" />
+    </Key>
+    <Property Name="DRIVER_ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DRIVER_CODE" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="DRIVER_NAME" Type="varchar" MaxLength="100" />
+    <Property Name="EMP_ID" Type="numeric" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="DUES_TBL">
+    <Key>
+      <PropertyRef Name="DUES_ID" />
+    </Key>
+    <Property Name="DUES_ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DUES_CODE" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="DUES_NAME" Type="varchar(max)" />
+    <Property Name="DUES_AMOUNT" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="DUES_PAY_DATE" Type="date" />
+    <Property Name="DUES_STATE" Type="bit" />
+    <Property Name="CLD_ID" Type="numeric" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="EMP_ACCOUNT_TBL">
+    <Key>
+      <PropertyRef Name="ACC_ID" />
+    </Key>
+    <Property Name="ACC_ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ACC_CODE" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="ACC_DATE" Type="date" />
+    <Property Name="ACC_TIME" Type="time" Precision="7" />
+    <Property Name="ACC_PALANCE" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="ACC_DISCOUNT" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="ACC_OVER" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="ACC_STATE" Type="bit" />
+    <Property Name="ACC_NOTE" Type="varchar(max)" />
+    <Property Name="EMP_ID" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EMPLOYEE_TBL">
+    <Key>
+      <PropertyRef Name="EMP_ID" />
+    </Key>
+    <Property Name="EMP_ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EMP_CODE" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="EMP_NAME" Type="varchar" MaxLength="200" />
+    <Property Name="EMP_N_NAME" Type="varchar(max)" />
+    <Property Name="EMP_TYPE" Type="varchar(max)" />
+    <Property Name="EMP_SAL" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="EMP_WORK_HOUR" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="EMP_JOB_SYS" Type="varchar(max)" />
+    <Property Name="EMP_EMPLOY_DATE" Type="date" />
+    <Property Name="EMP_ADD" Type="varchar(max)" />
+    <Property Name="EMP_MOB" Type="varchar(max)" />
+    <Property Name="EMP_SOCIAL_STATE" Type="varchar(max)" />
+    <Property Name="EMP_DEPT" Type="varchar(max)" />
+    <Property Name="EMP_STATE" Type="bit" />
+  </EntityType>
+  <EntityType Name="EVALUATION_TBL">
+    <Key>
+      <PropertyRef Name="EVAL_ID" />
+    </Key>
+    <Property Name="EVAL_ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EVAL_CODE" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="EVAL_DATE" Type="datetime" />
+    <Property Name="EVAL_FINAL_DEGREE" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="CLD_ID" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="SUBJ_PER_CLS_ID" Type="numeric" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="EVENT_SUBS_TBL">
+    <Key>
+      <PropertyRef Name="EVT_SUBS_ID" />
+    </Key>
+    <Property Name="EVT_SUBS_ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EVT_SUBS_CODE" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="EVT_SUBS_PRICE" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="EVT_SUBS_PAY_DATE" Type="date" />
+    <Property Name="EVT_SUBS_REQ" Type="varchar(max)" />
+    <Property Name="EVT_ID" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="CLD_ID" Type="numeric" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="EVENTS_TBL">
+    <Key>
+      <PropertyRef Name="EVT_ID" />
+    </Key>
+    <Property Name="EVT_ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EVT_CODE" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="EVT_NAME" Type="varchar" MaxLength="200" />
+    <Property Name="EVT_DATE" Type="date" />
+    <Property Name="EVT_CRAFT" Type="varchar(max)" />
+    <Property Name="EVT_PIC1" Type="bit" />
+    <Property Name="EVT_PIC2" Type="bit" />
+    <Property Name="CLD_ID" Type="numeric" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="FATHER_INFO_TBL">
+    <Key>
+      <PropertyRef Name="FATHER_ID" />
+    </Key>
+    <Property Name="FATHER_ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FATHER_CODE" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="FATHER_NAME" Type="varchar(max)" />
+    <Property Name="FATHER_SSID" Type="varchar" MaxLength="50" />
+    <Property Name="FATHER_MOB" Type="varchar(max)" />
+    <Property Name="FATHER_JOB" Type="varchar(max)" />
+    <Property Name="FATHER_EMAIL" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="MONTHLY_SUBS_TBL">
+    <Key>
+      <PropertyRef Name="M_SUBS_ID" />
+    </Key>
+    <Property Name="M_SUBS_ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="M_SUBS_CODE" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="M_SUBS_CONST_AMOUNT" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="M_SUBS_TOTAL" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="M_SUBS_PAY_DATE" Type="date" />
+    <Property Name="M_SUBS_STATE" Type="bit" />
+    <Property Name="CLD_ID" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="SUB_SUBS_ID" Type="numeric" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="MOTHER_INFO_TBL">
+    <Key>
+      <PropertyRef Name="MOTHER_ID" />
+    </Key>
+    <Property Name="MOTHER_ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MOTHER_CODE" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="MOTHER_NAME" Type="varchar(max)" />
+    <Property Name="MOTHER_SSID" Type="varchar" MaxLength="50" />
+    <Property Name="MOTHER_MOB" Type="varchar(max)" />
+    <Property Name="MOTHER_JOB" Type="varchar(max)" />
+    <Property Name="MOTHER_EMAIL" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="ORDER_TBL">
+    <Key>
+      <PropertyRef Name="ORDER_ID" />
+    </Key>
+    <Property Name="ORDER_ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ORDER_CODE" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="ORDER_TYPE" Type="varchar(max)" />
+    <Property Name="ORDER_QTY" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="ORDER_DATE" Type="date" />
+    <Property Name="ORDER_TIME" Type="time" Precision="7" />
+    <Property Name="ORDER_TOTAL_PRICE" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="IS_NEW_CLD" Type="bit" />
+    <Property Name="IS_MISSED" Type="bit" />
+    <Property Name="CLD_ID" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="BOOK_ID" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="UNIFORM_ID" Type="numeric" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="PARENT_INFO_TBL">
+    <Key>
+      <PropertyRef Name="PAR_ID" />
+    </Key>
+    <Property Name="PAR_ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PAR_CODE" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="PAR_NAME" Type="varchar" MaxLength="100" />
+    <Property Name="FATHER_ID" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="MOTHER_ID" Type="numeric" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="SUB_SUBSCRIPTION_TBL">
+    <Key>
+      <PropertyRef Name="SUB_SUBS_ID" />
+    </Key>
+    <Property Name="SUB_SUBS_ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SUB_SUBS_CODE" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="SUB_SUBS_NAME" Type="varchar(max)" />
+    <Property Name="SUB_SUBS_AMOUNT" Type="numeric" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="SUBJECT_PER_CLASS_TBL">
+    <Key>
+      <PropertyRef Name="SUBJ_PER_CLS_ID" />
+    </Key>
+    <Property Name="SUBJ_PER_CLS_ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SUBJ_PER_CLS_CODE" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="SUBJ_PER_CLS_DATE" Type="date" />
+    <Property Name="SUBJ_PER_CLS_TIME" Type="time" Precision="7" />
+    <Property Name="CLS_ID" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="SUBJ_ID" Type="numeric" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="SUBJECT_TBL">
+    <Key>
+      <PropertyRef Name="SUBJ_ID" />
+    </Key>
+    <Property Name="SUBJ_ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SUBJ_CODE" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="SUBJ_NAME" Type="varchar(max)" />
+    <Property Name="SUBJ_LVL" Type="varchar(max)" />
+    <Property Name="SUBJ_STATE" Type="bit" />
+    <Property Name="TEACHER_ID" Type="numeric" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="TEACHER_TBL">
+    <Key>
+      <PropertyRef Name="TEACHER_ID" />
+    </Key>
+    <Property Name="TEACHER_ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TEACHER_NAME" Type="varchar" MaxLength="100" />
+    <Property Name="EMP_ID" Type="numeric" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="UNIFORM_TBL">
+    <Key>
+      <PropertyRef Name="UNIFORM_ID" />
+    </Key>
+    <Property Name="UNIFORM_ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UNIFORM_CODE" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="UNIFORM_TYPE" Type="varchar(max)" />
+    <Property Name="UNIFORM_SIZE" Type="varchar(max)" />
+    <Property Name="UNIFORM_PRICE" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="UNIFORM_STATE" Type="bit" />
+    <Property Name="NOTES" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="USERS_TBL">
+    <Key>
+      <PropertyRef Name="USER_ID" />
+    </Key>
+    <Property Name="USER_ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="USER_CODE" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="USER_NAME" Type="varchar" MaxLength="100" />
+    <Property Name="USER_PASSWORD" Type="varchar(max)" />
+    <Property Name="USER_TYPE" Type="varchar(max)" />
+    <Property Name="EMP_ID" Type="numeric" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="VEHICLE_TBL">
+    <Key>
+      <PropertyRef Name="VEHICLE_ID" />
+    </Key>
+    <Property Name="VEHICLE_ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VEHICLE_CODE" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="VEHICLE_NAME" Type="varchar(max)" />
+    <Property Name="VEHICLE_NO" Type="varchar" MaxLength="100" />
+    <Property Name="VEHICLE_PATH" Type="varchar(max)" />
+    <Property Name="DRIVER_ID" Type="numeric" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="VISIT_TBL">
+    <Key>
+      <PropertyRef Name="VST_ID" />
+    </Key>
+    <Property Name="VST_ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VST_CODE" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="VSTR_NAME" Type="varchar(max)" />
+    <Property Name="VSTR_SSID" Type="varchar" MaxLength="200" />
+    <Property Name="VSTR_MOB" Type="varchar(max)" />
+    <Property Name="VST_PRPS" Type="varchar(max)" />
+    <Property Name="VST_DATE" Type="date" />
+    <Property Name="VST_TIME" Type="time" Precision="7" />
+    <Property Name="CLD_ID" Type="numeric" Precision="18" Scale="0" />
+  </EntityType>
+  <Association Name="FK_CHILD_TBL_PARENT_INFO_TBL">
+    <End Role="PARENT_INFO_TBL" Type="Self.PARENT_INFO_TBL" Multiplicity="0..1" />
+    <End Role="CHILD_TBL" Type="Self.CHILD_TBL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PARENT_INFO_TBL">
+        <PropertyRef Name="PAR_ID" />
+      </Principal>
+      <Dependent Role="CHILD_TBL">
+        <PropertyRef Name="PAR_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CLASSES_TBL_CHILD_TBL">
+    <End Role="CHILD_TBL" Type="Self.CHILD_TBL" Multiplicity="0..1" />
+    <End Role="CLASSES_TBL" Type="Self.CLASSES_TBL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CHILD_TBL">
+        <PropertyRef Name="CLD_ID" />
+      </Principal>
+      <Dependent Role="CLASSES_TBL">
+        <PropertyRef Name="CLD_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CLASSES_TBL_SUBJECT_TBL">
+    <End Role="SUBJECT_TBL" Type="Self.SUBJECT_TBL" Multiplicity="0..1" />
+    <End Role="CLASSES_TBL" Type="Self.CLASSES_TBL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SUBJECT_TBL">
+        <PropertyRef Name="SUBJ_ID" />
+      </Principal>
+      <Dependent Role="CLASSES_TBL">
+        <PropertyRef Name="SUBJ_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DEGREE_TBL_EVALUATION_TBL">
+    <End Role="EVALUATION_TBL" Type="Self.EVALUATION_TBL" Multiplicity="1" />
+    <End Role="DEGREE_TBL" Type="Self.DEGREE_TBL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EVALUATION_TBL">
+        <PropertyRef Name="EVAL_ID" />
+      </Principal>
+      <Dependent Role="DEGREE_TBL">
+        <PropertyRef Name="EVAL_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DRIVER_TBL_EMPLOYEE_TBL">
+    <End Role="EMPLOYEE_TBL" Type="Self.EMPLOYEE_TBL" Multiplicity="0..1" />
+    <End Role="DRIVER_TBL" Type="Self.DRIVER_TBL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EMPLOYEE_TBL">
+        <PropertyRef Name="EMP_ID" />
+      </Principal>
+      <Dependent Role="DRIVER_TBL">
+        <PropertyRef Name="EMP_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DUES_TBL_CHILD_TBL">
+    <End Role="CHILD_TBL" Type="Self.CHILD_TBL" Multiplicity="0..1" />
+    <End Role="DUES_TBL" Type="Self.DUES_TBL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CHILD_TBL">
+        <PropertyRef Name="CLD_ID" />
+      </Principal>
+      <Dependent Role="DUES_TBL">
+        <PropertyRef Name="CLD_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EMP_ACCOUNT_TBL_EMPLOYEE_TBL">
+    <End Role="EMPLOYEE_TBL" Type="Self.EMPLOYEE_TBL" Multiplicity="1" />
+    <End Role="EMP_ACCOUNT_TBL" Type="Self.EMP_ACCOUNT_TBL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EMPLOYEE_TBL">
+        <PropertyRef Name="EMP_ID" />
+      </Principal>
+      <Dependent Role="EMP_ACCOUNT_TBL">
+        <PropertyRef Name="EMP_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EVALUATION_TBL_CHILD_TBL">
+    <End Role="CHILD_TBL" Type="Self.CHILD_TBL" Multiplicity="0..1" />
+    <End Role="EVALUATION_TBL" Type="Self.EVALUATION_TBL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CHILD_TBL">
+        <PropertyRef Name="CLD_ID" />
+      </Principal>
+      <Dependent Role="EVALUATION_TBL">
+        <PropertyRef Name="CLD_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EVALUATION_TBL_SUBJECT_PER_CLASS_TBL">
+    <End Role="SUBJECT_PER_CLASS_TBL" Type="Self.SUBJECT_PER_CLASS_TBL" Multiplicity="0..1" />
+    <End Role="EVALUATION_TBL" Type="Self.EVALUATION_TBL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SUBJECT_PER_CLASS_TBL">
+        <PropertyRef Name="SUBJ_PER_CLS_ID" />
+      </Principal>
+      <Dependent Role="EVALUATION_TBL">
+        <PropertyRef Name="SUBJ_PER_CLS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EVENT_SUBS_TBL_CHILD_TBL">
+    <End Role="CHILD_TBL" Type="Self.CHILD_TBL" Multiplicity="0..1" />
+    <End Role="EVENT_SUBS_TBL" Type="Self.EVENT_SUBS_TBL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CHILD_TBL">
+        <PropertyRef Name="CLD_ID" />
+      </Principal>
+      <Dependent Role="EVENT_SUBS_TBL">
+        <PropertyRef Name="CLD_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EVENT_SUBS_TBL_EVENTS_TBL">
+    <End Role="EVENTS_TBL" Type="Self.EVENTS_TBL" Multiplicity="0..1" />
+    <End Role="EVENT_SUBS_TBL" Type="Self.EVENT_SUBS_TBL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EVENTS_TBL">
+        <PropertyRef Name="EVT_ID" />
+      </Principal>
+      <Dependent Role="EVENT_SUBS_TBL">
+        <PropertyRef Name="EVT_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EVENTS_TBL_CHILD_TBL">
+    <End Role="CHILD_TBL" Type="Self.CHILD_TBL" Multiplicity="0..1" />
+    <End Role="EVENTS_TBL" Type="Self.EVENTS_TBL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CHILD_TBL">
+        <PropertyRef Name="CLD_ID" />
+      </Principal>
+      <Dependent Role="EVENTS_TBL">
+        <PropertyRef Name="CLD_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MONTHLY_SUBS_TBL_CHILD_TBL">
+    <End Role="CHILD_TBL" Type="Self.CHILD_TBL" Multiplicity="0..1" />
+    <End Role="MONTHLY_SUBS_TBL" Type="Self.MONTHLY_SUBS_TBL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CHILD_TBL">
+        <PropertyRef Name="CLD_ID" />
+      </Principal>
+      <Dependent Role="MONTHLY_SUBS_TBL">
+        <PropertyRef Name="CLD_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MONTHLY_SUBS_TBL_SUB_SUBSCRIPTION_TBL">
+    <End Role="SUB_SUBSCRIPTION_TBL" Type="Self.SUB_SUBSCRIPTION_TBL" Multiplicity="0..1" />
+    <End Role="MONTHLY_SUBS_TBL" Type="Self.MONTHLY_SUBS_TBL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SUB_SUBSCRIPTION_TBL">
+        <PropertyRef Name="SUB_SUBS_ID" />
+      </Principal>
+      <Dependent Role="MONTHLY_SUBS_TBL">
+        <PropertyRef Name="SUB_SUBS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ORDER_TBL_BOOK_TBL">
+    <End Role="BOOK_TBL" Type="Self.BOOK_TBL" Multiplicity="0..1" />
+    <End Role="ORDER_TBL" Type="Self.ORDER_TBL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BOOK_TBL">
+        <PropertyRef Name="BOOK_ID" />
+      </Principal>
+      <Dependent Role="ORDER_TBL">
+        <PropertyRef Name="BOOK_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ORDER_TBL_CHILD_TBL">
+    <End Role="CHILD_TBL" Type="Self.CHILD_TBL" Multiplicity="0..1" />
+    <End Role="ORDER_TBL" Type="Self.ORDER_TBL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CHILD_TBL">
+        <PropertyRef Name="CLD_ID" />
+      </Principal>
+      <Dependent Role="ORDER_TBL">
+        <PropertyRef Name="CLD_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ORDER_TBL_UNIFORM_TBL">
+    <End Role="UNIFORM_TBL" Type="Self.UNIFORM_TBL" Multiplicity="0..1" />
+    <End Role="ORDER_TBL" Type="Self.ORDER_TBL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UNIFORM_TBL">
+        <PropertyRef Name="UNIFORM_ID" />
+      </Principal>
+      <Dependent Role="ORDER_TBL">
+        <PropertyRef Name="UNIFORM_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PARENT_INFO_TBL_FATHER_INFO_TBL">
+    <End Role="FATHER_INFO_TBL" Type="Self.FATHER_INFO_TBL" Multiplicity="0..1" />
+    <End Role="PARENT_INFO_TBL" Type="Self.PARENT_INFO_TBL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FATHER_INFO_TBL">
+        <PropertyRef Name="FATHER_ID" />
+      </Principal>
+      <Dependent Role="PARENT_INFO_TBL">
+        <PropertyRef Name="FATHER_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PARENT_INFO_TBL_MOTHER_INFO_TBL">
+    <End Role="MOTHER_INFO_TBL" Type="Self.MOTHER_INFO_TBL" Multiplicity="0..1" />
+    <End Role="PARENT_INFO_TBL" Type="Self.PARENT_INFO_TBL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MOTHER_INFO_TBL">
+        <PropertyRef Name="MOTHER_ID" />
+      </Principal>
+      <Dependent Role="PARENT_INFO_TBL">
+        <PropertyRef Name="MOTHER_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SUBJECT_PER_CLASS_TBL_CLASSES_TBL">
+    <End Role="CLASSES_TBL" Type="Self.CLASSES_TBL" Multiplicity="0..1" />
+    <End Role="SUBJECT_PER_CLASS_TBL" Type="Self.SUBJECT_PER_CLASS_TBL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLASSES_TBL">
+        <PropertyRef Name="CLS_ID" />
+      </Principal>
+      <Dependent Role="SUBJECT_PER_CLASS_TBL">
+        <PropertyRef Name="CLS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SUBJECT_PER_CLASS_TBL_SUBJECT_TBL">
+    <End Role="SUBJECT_TBL" Type="Self.SUBJECT_TBL" Multiplicity="0..1" />
+    <End Role="SUBJECT_PER_CLASS_TBL" Type="Self.SUBJECT_PER_CLASS_TBL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SUBJECT_TBL">
+        <PropertyRef Name="SUBJ_ID" />
+      </Principal>
+      <Dependent Role="SUBJECT_PER_CLASS_TBL">
+        <PropertyRef Name="SUBJ_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TEACHER_TBL_EMPLOYEE_TBL">
+    <End Role="EMPLOYEE_TBL" Type="Self.EMPLOYEE_TBL" Multiplicity="0..1" />
+    <End Role="TEACHER_TBL" Type="Self.TEACHER_TBL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EMPLOYEE_TBL">
+        <PropertyRef Name="EMP_ID" />
+      </Principal>
+      <Dependent Role="TEACHER_TBL">
+        <PropertyRef Name="EMP_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_USERS_TBL_EMPLOYEE_TBL">
+    <End Role="EMPLOYEE_TBL" Type="Self.EMPLOYEE_TBL" Multiplicity="0..1" />
+    <End Role="USERS_TBL" Type="Self.USERS_TBL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EMPLOYEE_TBL">
+        <PropertyRef Name="EMP_ID" />
+      </Principal>
+      <Dependent Role="USERS_TBL">
+        <PropertyRef Name="EMP_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VEHICLE_TBL_DRIVER_TBL">
+    <End Role="DRIVER_TBL" Type="Self.DRIVER_TBL" Multiplicity="0..1" />
+    <End Role="VEHICLE_TBL" Type="Self.VEHICLE_TBL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DRIVER_TBL">
+        <PropertyRef Name="DRIVER_ID" />
+      </Principal>
+      <Dependent Role="VEHICLE_TBL">
+        <PropertyRef Name="DRIVER_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VISIT_TBL_CHILD_TBL">
+    <End Role="CHILD_TBL" Type="Self.CHILD_TBL" Multiplicity="0..1" />
+    <End Role="VISIT_TBL" Type="Self.VISIT_TBL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CHILD_TBL">
+        <PropertyRef Name="CLD_ID" />
+      </Principal>
+      <Dependent Role="VISIT_TBL">
+        <PropertyRef Name="CLD_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SMART_NURSERY_2024ModelStoreContainer">
+    <EntitySet Name="BOOK_TBL" EntityType="Self.BOOK_TBL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CHILD_TBL" EntityType="Self.CHILD_TBL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CLASSES_TBL" EntityType="Self.CLASSES_TBL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DEGREE_TBL" EntityType="Self.DEGREE_TBL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DRIVER_TBL" EntityType="Self.DRIVER_TBL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DUES_TBL" EntityType="Self.DUES_TBL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EMP_ACCOUNT_TBL" EntityType="Self.EMP_ACCOUNT_TBL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EMPLOYEE_TBL" EntityType="Self.EMPLOYEE_TBL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EVALUATION_TBL" EntityType="Self.EVALUATION_TBL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EVENT_SUBS_TBL" EntityType="Self.EVENT_SUBS_TBL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EVENTS_TBL" EntityType="Self.EVENTS_TBL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FATHER_INFO_TBL" EntityType="Self.FATHER_INFO_TBL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MONTHLY_SUBS_TBL" EntityType="Self.MONTHLY_SUBS_TBL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MOTHER_INFO_TBL" EntityType="Self.MOTHER_INFO_TBL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ORDER_TBL" EntityType="Self.ORDER_TBL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PARENT_INFO_TBL" EntityType="Self.PARENT_INFO_TBL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SUB_SUBSCRIPTION_TBL" EntityType="Self.SUB_SUBSCRIPTION_TBL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SUBJECT_PER_CLASS_TBL" EntityType="Self.SUBJECT_PER_CLASS_TBL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SUBJECT_TBL" EntityType="Self.SUBJECT_TBL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TEACHER_TBL" EntityType="Self.TEACHER_TBL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UNIFORM_TBL" EntityType="Self.UNIFORM_TBL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USERS_TBL" EntityType="Self.USERS_TBL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VEHICLE_TBL" EntityType="Self.VEHICLE_TBL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VISIT_TBL" EntityType="Self.VISIT_TBL" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_CHILD_TBL_PARENT_INFO_TBL" Association="Self.FK_CHILD_TBL_PARENT_INFO_TBL">
+      <End Role="PARENT_INFO_TBL" EntitySet="PARENT_INFO_TBL" />
+      <End Role="CHILD_TBL" EntitySet="CHILD_TBL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CLASSES_TBL_CHILD_TBL" Association="Self.FK_CLASSES_TBL_CHILD_TBL">
+      <End Role="CHILD_TBL" EntitySet="CHILD_TBL" />
+      <End Role="CLASSES_TBL" EntitySet="CLASSES_TBL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CLASSES_TBL_SUBJECT_TBL" Association="Self.FK_CLASSES_TBL_SUBJECT_TBL">
+      <End Role="SUBJECT_TBL" EntitySet="SUBJECT_TBL" />
+      <End Role="CLASSES_TBL" EntitySet="CLASSES_TBL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DEGREE_TBL_EVALUATION_TBL" Association="Self.FK_DEGREE_TBL_EVALUATION_TBL">
+      <End Role="EVALUATION_TBL" EntitySet="EVALUATION_TBL" />
+      <End Role="DEGREE_TBL" EntitySet="DEGREE_TBL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DRIVER_TBL_EMPLOYEE_TBL" Association="Self.FK_DRIVER_TBL_EMPLOYEE_TBL">
+      <End Role="EMPLOYEE_TBL" EntitySet="EMPLOYEE_TBL" />
+      <End Role="DRIVER_TBL" EntitySet="DRIVER_TBL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DUES_TBL_CHILD_TBL" Association="Self.FK_DUES_TBL_CHILD_TBL">
+      <End Role="CHILD_TBL" EntitySet="CHILD_TBL" />
+      <End Role="DUES_TBL" EntitySet="DUES_TBL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EMP_ACCOUNT_TBL_EMPLOYEE_TBL" Association="Self.FK_EMP_ACCOUNT_TBL_EMPLOYEE_TBL">
+      <End Role="EMPLOYEE_TBL" EntitySet="EMPLOYEE_TBL" />
+      <End Role="EMP_ACCOUNT_TBL" EntitySet="EMP_ACCOUNT_TBL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EVALUATION_TBL_CHILD_TBL" Association="Self.FK_EVALUATION_TBL_CHILD_TBL">
+      <End Role="CHILD_TBL" EntitySet="CHILD_TBL" />
+      <End Role="EVALUATION_TBL" EntitySet="EVALUATION_TBL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EVALUATION_TBL_SUBJECT_PER_CLASS_TBL" Association="Self.FK_EVALUATION_TBL_SUBJECT_PER_CLASS_TBL">
+      <End Role="SUBJECT_PER_CLASS_TBL" EntitySet="SUBJECT_PER_CLASS_TBL" />
+      <End Role="EVALUATION_TBL" EntitySet="EVALUATION_TBL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EVENT_SUBS_TBL_CHILD_TBL" Association="Self.FK_EVENT_SUBS_TBL_CHILD_TBL">
+      <End Role="CHILD_TBL" EntitySet="CHILD_TBL" />
+      <End Role="EVENT_SUBS_TBL" EntitySet="EVENT_SUBS_TBL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EVENT_SUBS_TBL_EVENTS_TBL" Association="Self.FK_EVENT_SUBS_TBL_EVENTS_TBL">
+      <End Role="EVENTS_TBL" EntitySet="EVENTS_TBL" />
+      <End Role="EVENT_SUBS_TBL" EntitySet="EVENT_SUBS_TBL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EVENTS_TBL_CHILD_TBL" Association="Self.FK_EVENTS_TBL_CHILD_TBL">
+      <End Role="CHILD_TBL" EntitySet="CHILD_TBL" />
+      <End Role="EVENTS_TBL" EntitySet="EVENTS_TBL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MONTHLY_SUBS_TBL_CHILD_TBL" Association="Self.FK_MONTHLY_SUBS_TBL_CHILD_TBL">
+      <End Role="CHILD_TBL" EntitySet="CHILD_TBL" />
+      <End Role="MONTHLY_SUBS_TBL" EntitySet="MONTHLY_SUBS_TBL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MONTHLY_SUBS_TBL_SUB_SUBSCRIPTION_TBL" Association="Self.FK_MONTHLY_SUBS_TBL_SUB_SUBSCRIPTION_TBL">
+      <End Role="SUB_SUBSCRIPTION_TBL" EntitySet="SUB_SUBSCRIPTION_TBL" />
+      <End Role="MONTHLY_SUBS_TBL" EntitySet="MONTHLY_SUBS_TBL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ORDER_TBL_BOOK_TBL" Association="Self.FK_ORDER_TBL_BOOK_TBL">
+      <End Role="BOOK_TBL" EntitySet="BOOK_TBL" />
+      <End Role="ORDER_TBL" EntitySet="ORDER_TBL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ORDER_TBL_CHILD_TBL" Association="Self.FK_ORDER_TBL_CHILD_TBL">
+      <End Role="CHILD_TBL" EntitySet="CHILD_TBL" />
+      <End Role="ORDER_TBL" EntitySet="ORDER_TBL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ORDER_TBL_UNIFORM_TBL" Association="Self.FK_ORDER_TBL_UNIFORM_TBL">
+      <End Role="UNIFORM_TBL" EntitySet="UNIFORM_TBL" />
+      <End Role="ORDER_TBL" EntitySet="ORDER_TBL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PARENT_INFO_TBL_FATHER_INFO_TBL" Association="Self.FK_PARENT_INFO_TBL_FATHER_INFO_TBL">
+      <End Role="FATHER_INFO_TBL" EntitySet="FATHER_INFO_TBL" />
+      <End Role="PARENT_INFO_TBL" EntitySet="PARENT_INFO_TBL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PARENT_INFO_TBL_MOTHER_INFO_TBL" Association="Self.FK_PARENT_INFO_TBL_MOTHER_INFO_TBL">
+      <End Role="MOTHER_INFO_TBL" EntitySet="MOTHER_INFO_TBL" />
+      <End Role="PARENT_INFO_TBL" EntitySet="PARENT_INFO_TBL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SUBJECT_PER_CLASS_TBL_CLASSES_TBL" Association="Self.FK_SUBJECT_PER_CLASS_TBL_CLASSES_TBL">
+      <End Role="CLASSES_TBL" EntitySet="CLASSES_TBL" />
+      <End Role="SUBJECT_PER_CLASS_TBL" EntitySet="SUBJECT_PER_CLASS_TBL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SUBJECT_PER_CLASS_TBL_SUBJECT_TBL" Association="Self.FK_SUBJECT_PER_CLASS_TBL_SUBJECT_TBL">
+      <End Role="SUBJECT_TBL" EntitySet="SUBJECT_TBL" />
+      <End Role="SUBJECT_PER_CLASS_TBL" EntitySet="SUBJECT_PER_CLASS_TBL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TEACHER_TBL_EMPLOYEE_TBL" Association="Self.FK_TEACHER_TBL_EMPLOYEE_TBL">
+      <End Role="EMPLOYEE_TBL" EntitySet="EMPLOYEE_TBL" />
+      <End Role="TEACHER_TBL" EntitySet="TEACHER_TBL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_USERS_TBL_EMPLOYEE_TBL" Association="Self.FK_USERS_TBL_EMPLOYEE_TBL">
+      <End Role="EMPLOYEE_TBL" EntitySet="EMPLOYEE_TBL" />
+      <End Role="USERS_TBL" EntitySet="USERS_TBL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VEHICLE_TBL_DRIVER_TBL" Association="Self.FK_VEHICLE_TBL_DRIVER_TBL">
+      <End Role="DRIVER_TBL" EntitySet="DRIVER_TBL" />
+      <End Role="VEHICLE_TBL" EntitySet="VEHICLE_TBL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VISIT_TBL_CHILD_TBL" Association="Self.FK_VISIT_TBL_CHILD_TBL">
+      <End Role="CHILD_TBL" EntitySet="CHILD_TBL" />
+      <End Role="VISIT_TBL" EntitySet="VISIT_TBL" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

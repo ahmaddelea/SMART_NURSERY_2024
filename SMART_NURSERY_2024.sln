@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMART_NURSERT_DATABASE_2024", "SMART_NURSERT_DATABASE_2024\SMART_NURSERT_DATABASE_2024.csproj", "{5D609EC5-0C11-4B10-BA41-A6F95875542A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMART_NUSERY_FORMS_2024", "SMART_NUSERY_FORMS_2024\SMART_NUSERY_FORMS_2024.csproj", "{14463E32-45F7-4CB5-8BA9-A03D68CF3FF1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5D609EC5-0C11-4B10-BA41-A6F95875542A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D609EC5-0C11-4B10-BA41-A6F95875542A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D609EC5-0C11-4B10-BA41-A6F95875542A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D609EC5-0C11-4B10-BA41-A6F95875542A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14463E32-45F7-4CB5-8BA9-A03D68CF3FF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14463E32-45F7-4CB5-8BA9-A03D68CF3FF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14463E32-45F7-4CB5-8BA9-A03D68CF3FF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14463E32-45F7-4CB5-8BA9-A03D68CF3FF1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4ADE0084-E6B6-4779-B1D4-5EF65CECDDA1}
+	EndGlobalSection
+EndGlobal
