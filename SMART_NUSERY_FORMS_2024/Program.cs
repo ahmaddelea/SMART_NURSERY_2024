@@ -19,7 +19,7 @@ namespace SMART_NUSERY_FORMS_2024
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MAIN_DATA_FRM());
+            Application.Run(new CHILD_FRM());
         }
     }
 }
