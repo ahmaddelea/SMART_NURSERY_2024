@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="4e448d2cca0944bd9145f9834c7066d3" Name="Diagram1">
+      <Diagram DiagramId="4e448d2cca0944bd9145f9834c7066d3" Name="Diagram1" ZoomLevel="97">
         <EntityTypeShape EntityType="SMART_NURSERY_2024Model.BOOK_TBL" Width="1.5" PointX="8.25" PointY="6" IsExpanded="true" />
         <EntityTypeShape EntityType="SMART_NURSERY_2024Model.CHILD_TBL" Width="1.5" PointX="5.25" PointY="12.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SMART_NURSERY_2024Model.CLASSES_TBL" Width="1.5" PointX="10.5" PointY="13.375" IsExpanded="true" />
@@ -16,11 +16,8 @@
         <EntityTypeShape EntityType="SMART_NURSERY_2024Model.EVALUATION_TBL" Width="1.5" PointX="15" PointY="13.5" IsExpanded="true" />
         <EntityTypeShape EntityType="SMART_NURSERY_2024Model.EVENT_SUBS_TBL" Width="1.5" PointX="9.75" PointY="17.625" IsExpanded="true" />
         <EntityTypeShape EntityType="SMART_NURSERY_2024Model.EVENTS_TBL" Width="1.5" PointX="7.5" PointY="20.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="SMART_NURSERY_2024Model.FATHER_INFO_TBL" Width="1.5" PointX="0.75" PointY="13.5" IsExpanded="true" />
         <EntityTypeShape EntityType="SMART_NURSERY_2024Model.MONTHLY_SUBS_TBL" Width="1.5" PointX="7.5" PointY="9.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="SMART_NURSERY_2024Model.MOTHER_INFO_TBL" Width="1.5" PointX="0.75" PointY="9.5" IsExpanded="true" />
         <EntityTypeShape EntityType="SMART_NURSERY_2024Model.ORDER_TBL" Width="1.5" PointX="10.5" PointY="7.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="SMART_NURSERY_2024Model.PARENT_INFO_TBL" Width="1.5" PointX="3" PointY="13.5" IsExpanded="true" />
         <EntityTypeShape EntityType="SMART_NURSERY_2024Model.SUB_SUBSCRIPTION_TBL" Width="1.5" PointX="5.25" PointY="9.875" IsExpanded="true" />
         <EntityTypeShape EntityType="SMART_NURSERY_2024Model.SUBJECT_PER_CLASS_TBL" Width="1.5" PointX="12.75" PointY="13.5" IsExpanded="true" />
         <EntityTypeShape EntityType="SMART_NURSERY_2024Model.SUBJECT_TBL" Width="1.5" PointX="8.25" PointY="24.5" IsExpanded="true" />
@@ -30,7 +27,6 @@
         <EntityTypeShape EntityType="SMART_NURSERY_2024Model.VEHICLE_TBL" Width="1.5" PointX="16.25" PointY="18.375" IsExpanded="true" />
         <EntityTypeShape EntityType="SMART_NURSERY_2024Model.VISIT_TBL" Width="1.5" PointX="7.5" PointY="32.375" IsExpanded="true" />
         <AssociationConnector Association="SMART_NURSERY_2024Model.FK_ORDER_TBL_BOOK_TBL" ManuallyRouted="false" />
-        <AssociationConnector Association="SMART_NURSERY_2024Model.FK_CHILD_TBL_PARENT_INFO_TBL" ManuallyRouted="false" />
         <AssociationConnector Association="SMART_NURSERY_2024Model.FK_CLASSES_TBL_CHILD_TBL" ManuallyRouted="false" />
         <AssociationConnector Association="SMART_NURSERY_2024Model.FK_DUES_TBL_CHILD_TBL" ManuallyRouted="false" />
         <AssociationConnector Association="SMART_NURSERY_2024Model.FK_EVALUATION_TBL_CHILD_TBL" ManuallyRouted="false" />
@@ -49,11 +45,11 @@
         <AssociationConnector Association="SMART_NURSERY_2024Model.FK_USERS_TBL_EMPLOYEE_TBL" ManuallyRouted="false" />
         <AssociationConnector Association="SMART_NURSERY_2024Model.FK_EVALUATION_TBL_SUBJECT_PER_CLASS_TBL" ManuallyRouted="false" />
         <AssociationConnector Association="SMART_NURSERY_2024Model.FK_EVENT_SUBS_TBL_EVENTS_TBL" ManuallyRouted="false" />
-        <AssociationConnector Association="SMART_NURSERY_2024Model.FK_PARENT_INFO_TBL_FATHER_INFO_TBL" ManuallyRouted="false" />
         <AssociationConnector Association="SMART_NURSERY_2024Model.FK_MONTHLY_SUBS_TBL_SUB_SUBSCRIPTION_TBL" ManuallyRouted="false" />
-        <AssociationConnector Association="SMART_NURSERY_2024Model.FK_PARENT_INFO_TBL_MOTHER_INFO_TBL" ManuallyRouted="false" />
         <AssociationConnector Association="SMART_NURSERY_2024Model.FK_ORDER_TBL_UNIFORM_TBL" ManuallyRouted="false" />
         <AssociationConnector Association="SMART_NURSERY_2024Model.FK_SUBJECT_PER_CLASS_TBL_SUBJECT_TBL" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="SMART_NURSERY_2024Model.PARENT_INFO_TBL" Width="1.5" PointX="3" PointY="12.75" />
+        <AssociationConnector Association="SMART_NURSERY_2024Model.FK_CHILD_TBL_PARENT_INFO_TBL" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

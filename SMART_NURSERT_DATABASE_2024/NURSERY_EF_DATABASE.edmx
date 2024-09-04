@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="SMART_NURSERY_2024Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="SMART_NURSERY_2024Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="BOOK_TBL">
           <Key>
             <PropertyRef Name="BOOK_ID" />
@@ -139,18 +139,6 @@
           <Property Name="EVT_PIC2" Type="bit" />
           <Property Name="CLD_ID" Type="numeric" Precision="18" Scale="0" />
         </EntityType>
-        <EntityType Name="FATHER_INFO_TBL">
-          <Key>
-            <PropertyRef Name="FATHER_ID" />
-          </Key>
-          <Property Name="FATHER_ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="FATHER_CODE" Type="numeric" Precision="18" Scale="0" />
-          <Property Name="FATHER_NAME" Type="varchar(max)" />
-          <Property Name="FATHER_SSID" Type="varchar" MaxLength="50" />
-          <Property Name="FATHER_MOB" Type="varchar(max)" />
-          <Property Name="FATHER_JOB" Type="varchar(max)" />
-          <Property Name="FATHER_EMAIL" Type="varchar(max)" />
-        </EntityType>
         <EntityType Name="MONTHLY_SUBS_TBL">
           <Key>
             <PropertyRef Name="M_SUBS_ID" />
@@ -163,18 +151,6 @@
           <Property Name="M_SUBS_STATE" Type="bit" />
           <Property Name="CLD_ID" Type="numeric" Precision="18" Scale="0" />
           <Property Name="SUB_SUBS_ID" Type="numeric" Precision="18" Scale="0" />
-        </EntityType>
-        <EntityType Name="MOTHER_INFO_TBL">
-          <Key>
-            <PropertyRef Name="MOTHER_ID" />
-          </Key>
-          <Property Name="MOTHER_ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="MOTHER_CODE" Type="numeric" Precision="18" Scale="0" />
-          <Property Name="MOTHER_NAME" Type="varchar(max)" />
-          <Property Name="MOTHER_SSID" Type="varchar" MaxLength="50" />
-          <Property Name="MOTHER_MOB" Type="varchar(max)" />
-          <Property Name="MOTHER_JOB" Type="varchar(max)" />
-          <Property Name="MOTHER_EMAIL" Type="varchar(max)" />
         </EntityType>
         <EntityType Name="ORDER_TBL">
           <Key>
@@ -200,8 +176,19 @@
           <Property Name="PAR_ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="PAR_CODE" Type="numeric" Precision="18" Scale="0" />
           <Property Name="PAR_NAME" Type="varchar" MaxLength="100" />
-          <Property Name="FATHER_ID" Type="numeric" Precision="18" Scale="0" />
-          <Property Name="MOTHER_ID" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="FATHER_NAME" Type="varchar(max)" />
+          <Property Name="FATHER_SSID" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="FATHER_MOB" Type="varchar(max)" />
+          <Property Name="FATHER_JOB" Type="varchar(max)" />
+          <Property Name="FATHER_EMAIL" Type="varchar(max)" />
+          <Property Name="FATHER_STATE" Type="bit" />
+          <Property Name="MOTHER_NAME" Type="varchar(max)" />
+          <Property Name="MOTHER_SSID" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="MOTHER_MOB" Type="varchar(max)" />
+          <Property Name="MOTHER_JOB" Type="varchar(max)" />
+          <Property Name="MOTHER_EMAIL" Type="varchar(max)" />
+          <Property Name="MOTHER_STATE" Type="bit" />
+          <Property Name="PAR_ADDRESS" Type="varchar(max)" />
         </EntityType>
         <EntityType Name="SUB_SUBSCRIPTION_TBL">
           <Key>
@@ -494,30 +481,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_PARENT_INFO_TBL_FATHER_INFO_TBL">
-          <End Role="FATHER_INFO_TBL" Type="Self.FATHER_INFO_TBL" Multiplicity="0..1" />
-          <End Role="PARENT_INFO_TBL" Type="Self.PARENT_INFO_TBL" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="FATHER_INFO_TBL">
-              <PropertyRef Name="FATHER_ID" />
-            </Principal>
-            <Dependent Role="PARENT_INFO_TBL">
-              <PropertyRef Name="FATHER_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_PARENT_INFO_TBL_MOTHER_INFO_TBL">
-          <End Role="MOTHER_INFO_TBL" Type="Self.MOTHER_INFO_TBL" Multiplicity="0..1" />
-          <End Role="PARENT_INFO_TBL" Type="Self.PARENT_INFO_TBL" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="MOTHER_INFO_TBL">
-              <PropertyRef Name="MOTHER_ID" />
-            </Principal>
-            <Dependent Role="PARENT_INFO_TBL">
-              <PropertyRef Name="MOTHER_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_SUBJECT_PER_CLASS_TBL_CLASSES_TBL">
           <End Role="CLASSES_TBL" Type="Self.CLASSES_TBL" Multiplicity="0..1" />
           <End Role="SUBJECT_PER_CLASS_TBL" Type="Self.SUBJECT_PER_CLASS_TBL" Multiplicity="*" />
@@ -602,9 +565,7 @@
           <EntitySet Name="EVALUATION_TBL" EntityType="Self.EVALUATION_TBL" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="EVENT_SUBS_TBL" EntityType="Self.EVENT_SUBS_TBL" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="EVENTS_TBL" EntityType="Self.EVENTS_TBL" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="FATHER_INFO_TBL" EntityType="Self.FATHER_INFO_TBL" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="MONTHLY_SUBS_TBL" EntityType="Self.MONTHLY_SUBS_TBL" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="MOTHER_INFO_TBL" EntityType="Self.MOTHER_INFO_TBL" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ORDER_TBL" EntityType="Self.ORDER_TBL" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PARENT_INFO_TBL" EntityType="Self.PARENT_INFO_TBL" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SUB_SUBSCRIPTION_TBL" EntityType="Self.SUB_SUBSCRIPTION_TBL" Schema="dbo" store:Type="Tables" />
@@ -683,14 +644,6 @@
             <End Role="UNIFORM_TBL" EntitySet="UNIFORM_TBL" />
             <End Role="ORDER_TBL" EntitySet="ORDER_TBL" />
           </AssociationSet>
-          <AssociationSet Name="FK_PARENT_INFO_TBL_FATHER_INFO_TBL" Association="Self.FK_PARENT_INFO_TBL_FATHER_INFO_TBL">
-            <End Role="FATHER_INFO_TBL" EntitySet="FATHER_INFO_TBL" />
-            <End Role="PARENT_INFO_TBL" EntitySet="PARENT_INFO_TBL" />
-          </AssociationSet>
-          <AssociationSet Name="FK_PARENT_INFO_TBL_MOTHER_INFO_TBL" Association="Self.FK_PARENT_INFO_TBL_MOTHER_INFO_TBL">
-            <End Role="MOTHER_INFO_TBL" EntitySet="MOTHER_INFO_TBL" />
-            <End Role="PARENT_INFO_TBL" EntitySet="PARENT_INFO_TBL" />
-          </AssociationSet>
           <AssociationSet Name="FK_SUBJECT_PER_CLASS_TBL_CLASSES_TBL" Association="Self.FK_SUBJECT_PER_CLASS_TBL_CLASSES_TBL">
             <End Role="CLASSES_TBL" EntitySet="CLASSES_TBL" />
             <End Role="SUBJECT_PER_CLASS_TBL" EntitySet="SUBJECT_PER_CLASS_TBL" />
@@ -716,8 +669,7 @@
             <End Role="VISIT_TBL" EntitySet="VISIT_TBL" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="SMART_NURSERY_2024Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -744,7 +696,6 @@
           <Property Name="CLD_GEN" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="CLD_LVL" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="PAR_ID" Type="Decimal" Precision="18" Scale="0" />
-          <NavigationProperty Name="PARENT_INFO_TBL" Relationship="Self.FK_CHILD_TBL_PARENT_INFO_TBL" FromRole="CHILD_TBL" ToRole="PARENT_INFO_TBL" />
           <NavigationProperty Name="CLASSES_TBL" Relationship="Self.FK_CLASSES_TBL_CHILD_TBL" FromRole="CHILD_TBL" ToRole="CLASSES_TBL" />
           <NavigationProperty Name="DUES_TBL" Relationship="Self.FK_DUES_TBL_CHILD_TBL" FromRole="CHILD_TBL" ToRole="DUES_TBL" />
           <NavigationProperty Name="EVALUATION_TBL" Relationship="Self.FK_EVALUATION_TBL_CHILD_TBL" FromRole="CHILD_TBL" ToRole="EVALUATION_TBL" />
@@ -753,6 +704,7 @@
           <NavigationProperty Name="MONTHLY_SUBS_TBL" Relationship="Self.FK_MONTHLY_SUBS_TBL_CHILD_TBL" FromRole="CHILD_TBL" ToRole="MONTHLY_SUBS_TBL" />
           <NavigationProperty Name="ORDER_TBL" Relationship="Self.FK_ORDER_TBL_CHILD_TBL" FromRole="CHILD_TBL" ToRole="ORDER_TBL" />
           <NavigationProperty Name="VISIT_TBL" Relationship="Self.FK_VISIT_TBL_CHILD_TBL" FromRole="CHILD_TBL" ToRole="VISIT_TBL" />
+          <NavigationProperty Name="PARENT_INFO_TBL" Relationship="SMART_NURSERY_2024Model.FK_CHILD_TBL_PARENT_INFO_TBL" FromRole="CHILD_TBL" ToRole="PARENT_INFO_TBL" />
         </EntityType>
         <EntityType Name="CLASSES_TBL">
           <Key>
@@ -884,19 +836,6 @@
           <NavigationProperty Name="CHILD_TBL" Relationship="Self.FK_EVENTS_TBL_CHILD_TBL" FromRole="EVENTS_TBL" ToRole="CHILD_TBL" />
           <NavigationProperty Name="EVENT_SUBS_TBL" Relationship="Self.FK_EVENT_SUBS_TBL_EVENTS_TBL" FromRole="EVENTS_TBL" ToRole="EVENT_SUBS_TBL" />
         </EntityType>
-        <EntityType Name="FATHER_INFO_TBL">
-          <Key>
-            <PropertyRef Name="FATHER_ID" />
-          </Key>
-          <Property Name="FATHER_ID" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="FATHER_CODE" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="FATHER_NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="FATHER_SSID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="FATHER_MOB" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="FATHER_JOB" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="FATHER_EMAIL" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="PARENT_INFO_TBL" Relationship="Self.FK_PARENT_INFO_TBL_FATHER_INFO_TBL" FromRole="FATHER_INFO_TBL" ToRole="PARENT_INFO_TBL" />
-        </EntityType>
         <EntityType Name="MONTHLY_SUBS_TBL">
           <Key>
             <PropertyRef Name="M_SUBS_ID" />
@@ -911,19 +850,6 @@
           <Property Name="SUB_SUBS_ID" Type="Decimal" Precision="18" Scale="0" />
           <NavigationProperty Name="CHILD_TBL" Relationship="Self.FK_MONTHLY_SUBS_TBL_CHILD_TBL" FromRole="MONTHLY_SUBS_TBL" ToRole="CHILD_TBL" />
           <NavigationProperty Name="SUB_SUBSCRIPTION_TBL" Relationship="Self.FK_MONTHLY_SUBS_TBL_SUB_SUBSCRIPTION_TBL" FromRole="MONTHLY_SUBS_TBL" ToRole="SUB_SUBSCRIPTION_TBL" />
-        </EntityType>
-        <EntityType Name="MOTHER_INFO_TBL">
-          <Key>
-            <PropertyRef Name="MOTHER_ID" />
-          </Key>
-          <Property Name="MOTHER_ID" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="MOTHER_CODE" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="MOTHER_NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="MOTHER_SSID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="MOTHER_MOB" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="MOTHER_JOB" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="MOTHER_EMAIL" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="PARENT_INFO_TBL" Relationship="Self.FK_PARENT_INFO_TBL_MOTHER_INFO_TBL" FromRole="MOTHER_INFO_TBL" ToRole="PARENT_INFO_TBL" />
         </EntityType>
         <EntityType Name="ORDER_TBL">
           <Key>
@@ -944,19 +870,6 @@
           <NavigationProperty Name="BOOK_TBL" Relationship="Self.FK_ORDER_TBL_BOOK_TBL" FromRole="ORDER_TBL" ToRole="BOOK_TBL" />
           <NavigationProperty Name="CHILD_TBL" Relationship="Self.FK_ORDER_TBL_CHILD_TBL" FromRole="ORDER_TBL" ToRole="CHILD_TBL" />
           <NavigationProperty Name="UNIFORM_TBL" Relationship="Self.FK_ORDER_TBL_UNIFORM_TBL" FromRole="ORDER_TBL" ToRole="UNIFORM_TBL" />
-        </EntityType>
-        <EntityType Name="PARENT_INFO_TBL">
-          <Key>
-            <PropertyRef Name="PAR_ID" />
-          </Key>
-          <Property Name="PAR_ID" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="PAR_CODE" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="PAR_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="FATHER_ID" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="MOTHER_ID" Type="Decimal" Precision="18" Scale="0" />
-          <NavigationProperty Name="CHILD_TBL" Relationship="Self.FK_CHILD_TBL_PARENT_INFO_TBL" FromRole="PARENT_INFO_TBL" ToRole="CHILD_TBL" />
-          <NavigationProperty Name="FATHER_INFO_TBL" Relationship="Self.FK_PARENT_INFO_TBL_FATHER_INFO_TBL" FromRole="PARENT_INFO_TBL" ToRole="FATHER_INFO_TBL" />
-          <NavigationProperty Name="MOTHER_INFO_TBL" Relationship="Self.FK_PARENT_INFO_TBL_MOTHER_INFO_TBL" FromRole="PARENT_INFO_TBL" ToRole="MOTHER_INFO_TBL" />
         </EntityType>
         <EntityType Name="SUB_SUBSCRIPTION_TBL">
           <Key>
@@ -1065,18 +978,6 @@
             </Principal>
             <Dependent Role="ORDER_TBL">
               <PropertyRef Name="BOOK_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_CHILD_TBL_PARENT_INFO_TBL">
-          <End Role="PARENT_INFO_TBL" Type="Self.PARENT_INFO_TBL" Multiplicity="0..1" />
-          <End Role="CHILD_TBL" Type="Self.CHILD_TBL" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="PARENT_INFO_TBL">
-              <PropertyRef Name="PAR_ID" />
-            </Principal>
-            <Dependent Role="CHILD_TBL">
-              <PropertyRef Name="PAR_ID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1296,18 +1197,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_PARENT_INFO_TBL_FATHER_INFO_TBL">
-          <End Role="FATHER_INFO_TBL" Type="Self.FATHER_INFO_TBL" Multiplicity="0..1" />
-          <End Role="PARENT_INFO_TBL" Type="Self.PARENT_INFO_TBL" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="FATHER_INFO_TBL">
-              <PropertyRef Name="FATHER_ID" />
-            </Principal>
-            <Dependent Role="PARENT_INFO_TBL">
-              <PropertyRef Name="FATHER_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_MONTHLY_SUBS_TBL_SUB_SUBSCRIPTION_TBL">
           <End Role="SUB_SUBSCRIPTION_TBL" Type="Self.SUB_SUBSCRIPTION_TBL" Multiplicity="0..1" />
           <End Role="MONTHLY_SUBS_TBL" Type="Self.MONTHLY_SUBS_TBL" Multiplicity="*" />
@@ -1317,18 +1206,6 @@
             </Principal>
             <Dependent Role="MONTHLY_SUBS_TBL">
               <PropertyRef Name="SUB_SUBS_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_PARENT_INFO_TBL_MOTHER_INFO_TBL">
-          <End Role="MOTHER_INFO_TBL" Type="Self.MOTHER_INFO_TBL" Multiplicity="0..1" />
-          <End Role="PARENT_INFO_TBL" Type="Self.PARENT_INFO_TBL" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="MOTHER_INFO_TBL">
-              <PropertyRef Name="MOTHER_ID" />
-            </Principal>
-            <Dependent Role="PARENT_INFO_TBL">
-              <PropertyRef Name="MOTHER_ID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1368,11 +1245,8 @@
           <EntitySet Name="EVALUATION_TBL" EntityType="Self.EVALUATION_TBL" />
           <EntitySet Name="EVENT_SUBS_TBL" EntityType="Self.EVENT_SUBS_TBL" />
           <EntitySet Name="EVENTS_TBL" EntityType="Self.EVENTS_TBL" />
-          <EntitySet Name="FATHER_INFO_TBL" EntityType="Self.FATHER_INFO_TBL" />
           <EntitySet Name="MONTHLY_SUBS_TBL" EntityType="Self.MONTHLY_SUBS_TBL" />
-          <EntitySet Name="MOTHER_INFO_TBL" EntityType="Self.MOTHER_INFO_TBL" />
           <EntitySet Name="ORDER_TBL" EntityType="Self.ORDER_TBL" />
-          <EntitySet Name="PARENT_INFO_TBL" EntityType="Self.PARENT_INFO_TBL" />
           <EntitySet Name="SUB_SUBSCRIPTION_TBL" EntityType="Self.SUB_SUBSCRIPTION_TBL" />
           <EntitySet Name="SUBJECT_PER_CLASS_TBL" EntityType="Self.SUBJECT_PER_CLASS_TBL" />
           <EntitySet Name="SUBJECT_TBL" EntityType="Self.SUBJECT_TBL" />
@@ -1384,10 +1258,6 @@
           <AssociationSet Name="FK_ORDER_TBL_BOOK_TBL" Association="Self.FK_ORDER_TBL_BOOK_TBL">
             <End Role="BOOK_TBL" EntitySet="BOOK_TBL" />
             <End Role="ORDER_TBL" EntitySet="ORDER_TBL" />
-          </AssociationSet>
-          <AssociationSet Name="FK_CHILD_TBL_PARENT_INFO_TBL" Association="Self.FK_CHILD_TBL_PARENT_INFO_TBL">
-            <End Role="PARENT_INFO_TBL" EntitySet="PARENT_INFO_TBL" />
-            <End Role="CHILD_TBL" EntitySet="CHILD_TBL" />
           </AssociationSet>
           <AssociationSet Name="FK_CLASSES_TBL_CHILD_TBL" Association="Self.FK_CLASSES_TBL_CHILD_TBL">
             <End Role="CHILD_TBL" EntitySet="CHILD_TBL" />
@@ -1461,17 +1331,9 @@
             <End Role="EVENTS_TBL" EntitySet="EVENTS_TBL" />
             <End Role="EVENT_SUBS_TBL" EntitySet="EVENT_SUBS_TBL" />
           </AssociationSet>
-          <AssociationSet Name="FK_PARENT_INFO_TBL_FATHER_INFO_TBL" Association="Self.FK_PARENT_INFO_TBL_FATHER_INFO_TBL">
-            <End Role="FATHER_INFO_TBL" EntitySet="FATHER_INFO_TBL" />
-            <End Role="PARENT_INFO_TBL" EntitySet="PARENT_INFO_TBL" />
-          </AssociationSet>
           <AssociationSet Name="FK_MONTHLY_SUBS_TBL_SUB_SUBSCRIPTION_TBL" Association="Self.FK_MONTHLY_SUBS_TBL_SUB_SUBSCRIPTION_TBL">
             <End Role="SUB_SUBSCRIPTION_TBL" EntitySet="SUB_SUBSCRIPTION_TBL" />
             <End Role="MONTHLY_SUBS_TBL" EntitySet="MONTHLY_SUBS_TBL" />
-          </AssociationSet>
-          <AssociationSet Name="FK_PARENT_INFO_TBL_MOTHER_INFO_TBL" Association="Self.FK_PARENT_INFO_TBL_MOTHER_INFO_TBL">
-            <End Role="MOTHER_INFO_TBL" EntitySet="MOTHER_INFO_TBL" />
-            <End Role="PARENT_INFO_TBL" EntitySet="PARENT_INFO_TBL" />
           </AssociationSet>
           <AssociationSet Name="FK_ORDER_TBL_UNIFORM_TBL" Association="Self.FK_ORDER_TBL_UNIFORM_TBL">
             <End Role="UNIFORM_TBL" EntitySet="UNIFORM_TBL" />
@@ -1481,7 +1343,46 @@
             <End Role="SUBJECT_TBL" EntitySet="SUBJECT_TBL" />
             <End Role="SUBJECT_PER_CLASS_TBL" EntitySet="SUBJECT_PER_CLASS_TBL" />
           </AssociationSet>
+          <EntitySet Name="PARENT_INFO_TBL" EntityType="SMART_NURSERY_2024Model.PARENT_INFO_TBL" />
+          <AssociationSet Name="FK_CHILD_TBL_PARENT_INFO_TBL" Association="SMART_NURSERY_2024Model.FK_CHILD_TBL_PARENT_INFO_TBL">
+            <End Role="PARENT_INFO_TBL" EntitySet="PARENT_INFO_TBL" />
+            <End Role="CHILD_TBL" EntitySet="CHILD_TBL" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="PARENT_INFO_TBL">
+          <Key>
+            <PropertyRef Name="PAR_ID" />
+          </Key>
+          <Property Name="PAR_ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PAR_CODE" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="PAR_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="FATHER_NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="FATHER_SSID" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="FATHER_MOB" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="FATHER_JOB" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="FATHER_EMAIL" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="FATHER_STATE" Type="Boolean" />
+          <Property Name="MOTHER_NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="MOTHER_SSID" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="MOTHER_MOB" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="MOTHER_JOB" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="MOTHER_EMAIL" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="MOTHER_STATE" Type="Boolean" />
+          <NavigationProperty Name="CHILD_TBL" Relationship="SMART_NURSERY_2024Model.FK_CHILD_TBL_PARENT_INFO_TBL" FromRole="PARENT_INFO_TBL" ToRole="CHILD_TBL" />
+          <Property Name="PAR_ADDRESS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <Association Name="FK_CHILD_TBL_PARENT_INFO_TBL">
+          <End Type="SMART_NURSERY_2024Model.PARENT_INFO_TBL" Role="PARENT_INFO_TBL" Multiplicity="0..1" />
+          <End Type="SMART_NURSERY_2024Model.CHILD_TBL" Role="CHILD_TBL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PARENT_INFO_TBL">
+              <PropertyRef Name="PAR_ID" />
+            </Principal>
+            <Dependent Role="CHILD_TBL">
+              <PropertyRef Name="PAR_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1633,19 +1534,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="FATHER_INFO_TBL">
-            <EntityTypeMapping TypeName="SMART_NURSERY_2024Model.FATHER_INFO_TBL">
-              <MappingFragment StoreEntitySet="FATHER_INFO_TBL">
-                <ScalarProperty Name="FATHER_ID" ColumnName="FATHER_ID" />
-                <ScalarProperty Name="FATHER_CODE" ColumnName="FATHER_CODE" />
-                <ScalarProperty Name="FATHER_NAME" ColumnName="FATHER_NAME" />
-                <ScalarProperty Name="FATHER_SSID" ColumnName="FATHER_SSID" />
-                <ScalarProperty Name="FATHER_MOB" ColumnName="FATHER_MOB" />
-                <ScalarProperty Name="FATHER_JOB" ColumnName="FATHER_JOB" />
-                <ScalarProperty Name="FATHER_EMAIL" ColumnName="FATHER_EMAIL" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="MONTHLY_SUBS_TBL">
             <EntityTypeMapping TypeName="SMART_NURSERY_2024Model.MONTHLY_SUBS_TBL">
               <MappingFragment StoreEntitySet="MONTHLY_SUBS_TBL">
@@ -1657,19 +1545,6 @@
                 <ScalarProperty Name="M_SUBS_STATE" ColumnName="M_SUBS_STATE" />
                 <ScalarProperty Name="CLD_ID" ColumnName="CLD_ID" />
                 <ScalarProperty Name="SUB_SUBS_ID" ColumnName="SUB_SUBS_ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="MOTHER_INFO_TBL">
-            <EntityTypeMapping TypeName="SMART_NURSERY_2024Model.MOTHER_INFO_TBL">
-              <MappingFragment StoreEntitySet="MOTHER_INFO_TBL">
-                <ScalarProperty Name="MOTHER_ID" ColumnName="MOTHER_ID" />
-                <ScalarProperty Name="MOTHER_CODE" ColumnName="MOTHER_CODE" />
-                <ScalarProperty Name="MOTHER_NAME" ColumnName="MOTHER_NAME" />
-                <ScalarProperty Name="MOTHER_SSID" ColumnName="MOTHER_SSID" />
-                <ScalarProperty Name="MOTHER_MOB" ColumnName="MOTHER_MOB" />
-                <ScalarProperty Name="MOTHER_JOB" ColumnName="MOTHER_JOB" />
-                <ScalarProperty Name="MOTHER_EMAIL" ColumnName="MOTHER_EMAIL" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1688,17 +1563,6 @@
                 <ScalarProperty Name="CLD_ID" ColumnName="CLD_ID" />
                 <ScalarProperty Name="BOOK_ID" ColumnName="BOOK_ID" />
                 <ScalarProperty Name="UNIFORM_ID" ColumnName="UNIFORM_ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="PARENT_INFO_TBL">
-            <EntityTypeMapping TypeName="SMART_NURSERY_2024Model.PARENT_INFO_TBL">
-              <MappingFragment StoreEntitySet="PARENT_INFO_TBL">
-                <ScalarProperty Name="PAR_ID" ColumnName="PAR_ID" />
-                <ScalarProperty Name="PAR_CODE" ColumnName="PAR_CODE" />
-                <ScalarProperty Name="PAR_NAME" ColumnName="PAR_NAME" />
-                <ScalarProperty Name="FATHER_ID" ColumnName="FATHER_ID" />
-                <ScalarProperty Name="MOTHER_ID" ColumnName="MOTHER_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1794,6 +1658,28 @@
                 <ScalarProperty Name="VST_DATE" ColumnName="VST_DATE" />
                 <ScalarProperty Name="VST_TIME" ColumnName="VST_TIME" />
                 <ScalarProperty Name="CLD_ID" ColumnName="CLD_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PARENT_INFO_TBL">
+            <EntityTypeMapping TypeName="SMART_NURSERY_2024Model.PARENT_INFO_TBL">
+              <MappingFragment StoreEntitySet="PARENT_INFO_TBL">
+                <ScalarProperty Name="PAR_ADDRESS" ColumnName="PAR_ADDRESS" />
+                <ScalarProperty Name="MOTHER_STATE" ColumnName="MOTHER_STATE" />
+                <ScalarProperty Name="MOTHER_EMAIL" ColumnName="MOTHER_EMAIL" />
+                <ScalarProperty Name="MOTHER_JOB" ColumnName="MOTHER_JOB" />
+                <ScalarProperty Name="MOTHER_MOB" ColumnName="MOTHER_MOB" />
+                <ScalarProperty Name="MOTHER_SSID" ColumnName="MOTHER_SSID" />
+                <ScalarProperty Name="MOTHER_NAME" ColumnName="MOTHER_NAME" />
+                <ScalarProperty Name="FATHER_STATE" ColumnName="FATHER_STATE" />
+                <ScalarProperty Name="FATHER_EMAIL" ColumnName="FATHER_EMAIL" />
+                <ScalarProperty Name="FATHER_JOB" ColumnName="FATHER_JOB" />
+                <ScalarProperty Name="FATHER_MOB" ColumnName="FATHER_MOB" />
+                <ScalarProperty Name="FATHER_SSID" ColumnName="FATHER_SSID" />
+                <ScalarProperty Name="FATHER_NAME" ColumnName="FATHER_NAME" />
+                <ScalarProperty Name="PAR_NAME" ColumnName="PAR_NAME" />
+                <ScalarProperty Name="PAR_CODE" ColumnName="PAR_CODE" />
+                <ScalarProperty Name="PAR_ID" ColumnName="PAR_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

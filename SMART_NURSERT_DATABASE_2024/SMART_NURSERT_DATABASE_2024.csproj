@@ -85,13 +85,7 @@
     <Compile Include="EVENT_SUBS_TBL.cs">
       <DependentUpon>NURSERY_EF_DATABASE.tt</DependentUpon>
     </Compile>
-    <Compile Include="FATHER_INFO_TBL.cs">
-      <DependentUpon>NURSERY_EF_DATABASE.tt</DependentUpon>
-    </Compile>
     <Compile Include="MONTHLY_SUBS_TBL.cs">
-      <DependentUpon>NURSERY_EF_DATABASE.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MOTHER_INFO_TBL.cs">
       <DependentUpon>NURSERY_EF_DATABASE.tt</DependentUpon>
     </Compile>
     <Compile Include="NURSERY_EF_DATABASE.Context.cs">

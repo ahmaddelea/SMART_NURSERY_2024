@@ -31,30 +31,33 @@ namespace SMART_NUSERY_FORMS_2024.FORMS
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CHILD_FRM));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.panelContainer = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl8 = new DevExpress.XtraEditors.PanelControl();
-            this.guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.CMB_PAR_NAME = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.CMB_PAR_ID = new Guna.UI2.WinForms.Guna2ComboBox();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl12 = new DevExpress.XtraEditors.PanelControl();
             this.LBL_CHANGE = new DevExpress.XtraEditors.LabelControl();
             this.panelControl11 = new DevExpress.XtraEditors.PanelControl();
-            this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.TXT_CLD_LVL = new Guna.UI2.WinForms.Guna2TextBox();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl10 = new DevExpress.XtraEditors.PanelControl();
-            this.CMB_PAR_CODE = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.CMB_CLD_GEN = new Guna.UI2.WinForms.Guna2ComboBox();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl9 = new DevExpress.XtraEditors.PanelControl();
-            this.DATE_PIRTH_DATE = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.DTP_CLD_P_DATE = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl7 = new DevExpress.XtraEditors.PanelControl();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.TXT_CLD_NAME = new Guna.UI2.WinForms.Guna2TextBox();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl6 = new DevExpress.XtraEditors.PanelControl();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.TXT_CLD_CODE = new Guna.UI2.WinForms.Guna2TextBox();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl5 = new DevExpress.XtraEditors.PanelControl();
-            this.TXT_ADD = new Guna.UI2.WinForms.Guna2TextBox();
+            this.TXT_CLD_ID = new Guna.UI2.WinForms.Guna2TextBox();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
@@ -62,8 +65,11 @@ namespace SMART_NUSERY_FORMS_2024.FORMS
             this.layoutControlGroup10 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup6 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.cmButton1 = new CMCodeAdvance.CMControls.CMButton();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            this.panelContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl8)).BeginInit();
@@ -88,10 +94,12 @@ namespace SMART_NUSERY_FORMS_2024.FORMS
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.panelContainer);
             this.layoutControl1.Controls.Add(this.panelControl1);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
@@ -102,6 +110,52 @@ namespace SMART_NUSERY_FORMS_2024.FORMS
             this.layoutControl1.Size = new System.Drawing.Size(1274, 590);
             this.layoutControl1.TabIndex = 13;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // panelContainer
+            // 
+            this.panelContainer.BackColor = System.Drawing.Color.Transparent;
+            this.panelContainer.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelContainer.BackgroundImage")));
+            this.panelContainer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelContainer.Controls.Add(this.labelControl9);
+            this.panelContainer.Controls.Add(this.labelControl8);
+            this.panelContainer.FillColor = System.Drawing.Color.Transparent;
+            this.panelContainer.Location = new System.Drawing.Point(2, 2);
+            this.panelContainer.Name = "panelContainer";
+            this.panelContainer.ShadowColor = System.Drawing.Color.Black;
+            this.panelContainer.Size = new System.Drawing.Size(632, 586);
+            this.panelContainer.TabIndex = 5;
+            // 
+            // labelControl9
+            // 
+            this.labelControl9.Appearance.Font = new System.Drawing.Font("Script MT Bold", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl9.Appearance.ForeColor = System.Drawing.Color.White;
+            this.labelControl9.Appearance.Options.UseFont = true;
+            this.labelControl9.Appearance.Options.UseForeColor = true;
+            this.labelControl9.Appearance.Options.UseTextOptions = true;
+            this.labelControl9.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.labelControl9.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.labelControl9.Location = new System.Drawing.Point(0, 0);
+            this.labelControl9.Name = "labelControl9";
+            this.labelControl9.Size = new System.Drawing.Size(632, 114);
+            this.labelControl9.TabIndex = 24;
+            this.labelControl9.Text = "Smart Nersury";
+            // 
+            // labelControl8
+            // 
+            this.labelControl8.Appearance.Font = new System.Drawing.Font("Script MT Bold", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl8.Appearance.ForeColor = System.Drawing.Color.White;
+            this.labelControl8.Appearance.Options.UseFont = true;
+            this.labelControl8.Appearance.Options.UseForeColor = true;
+            this.labelControl8.Appearance.Options.UseTextOptions = true;
+            this.labelControl8.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.labelControl8.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl8.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.labelControl8.Location = new System.Drawing.Point(0, 528);
+            this.labelControl8.Name = "labelControl8";
+            this.labelControl8.Size = new System.Drawing.Size(632, 58);
+            this.labelControl8.TabIndex = 24;
+            this.labelControl8.Text = "looking forward to abetter education";
             // 
             // panelControl1
             // 
@@ -126,8 +180,9 @@ namespace SMART_NUSERY_FORMS_2024.FORMS
             this.panelControl8.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.panelControl8.Appearance.Options.UseBackColor = true;
             this.panelControl8.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl8.Controls.Add(this.guna2ComboBox2);
-            this.panelControl8.Controls.Add(this.guna2ComboBox1);
+            this.panelControl8.Controls.Add(this.cmButton1);
+            this.panelControl8.Controls.Add(this.CMB_PAR_NAME);
+            this.panelControl8.Controls.Add(this.CMB_PAR_ID);
             this.panelControl8.Controls.Add(this.labelControl7);
             this.panelControl8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl8.Location = new System.Drawing.Point(2, 394);
@@ -135,55 +190,55 @@ namespace SMART_NUSERY_FORMS_2024.FORMS
             this.panelControl8.Size = new System.Drawing.Size(630, 56);
             this.panelControl8.TabIndex = 0;
             // 
-            // guna2ComboBox2
+            // CMB_PAR_NAME
             // 
-            this.guna2ComboBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2ComboBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox2.BorderColor = System.Drawing.SystemColors.ControlLight;
-            this.guna2ComboBox2.BorderRadius = 7;
-            this.guna2ComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox2.FillColor = System.Drawing.SystemColors.ControlLight;
-            this.guna2ComboBox2.FocusedColor = System.Drawing.SystemColors.Highlight;
-            this.guna2ComboBox2.FocusedState.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.guna2ComboBox2.Font = new System.Drawing.Font("Bodoni MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ComboBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(34)))), ((int)(((byte)(52)))));
-            this.guna2ComboBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox2.ItemHeight = 30;
-            this.guna2ComboBox2.Location = new System.Drawing.Point(36, 7);
-            this.guna2ComboBox2.Name = "guna2ComboBox2";
-            this.guna2ComboBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.guna2ComboBox2.ShadowDecoration.BorderRadius = 10;
-            this.guna2ComboBox2.ShadowDecoration.Enabled = true;
-            this.guna2ComboBox2.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(5, 0, 0, 5);
-            this.guna2ComboBox2.Size = new System.Drawing.Size(336, 36);
-            this.guna2ComboBox2.TabIndex = 27;
-            this.guna2ComboBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.CMB_PAR_NAME.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.CMB_PAR_NAME.BackColor = System.Drawing.Color.Transparent;
+            this.CMB_PAR_NAME.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.CMB_PAR_NAME.BorderRadius = 7;
+            this.CMB_PAR_NAME.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.CMB_PAR_NAME.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CMB_PAR_NAME.FillColor = System.Drawing.SystemColors.ControlLight;
+            this.CMB_PAR_NAME.FocusedColor = System.Drawing.SystemColors.Highlight;
+            this.CMB_PAR_NAME.FocusedState.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.CMB_PAR_NAME.Font = new System.Drawing.Font("Bodoni MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CMB_PAR_NAME.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(34)))), ((int)(((byte)(52)))));
+            this.CMB_PAR_NAME.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CMB_PAR_NAME.ItemHeight = 30;
+            this.CMB_PAR_NAME.Location = new System.Drawing.Point(110, 7);
+            this.CMB_PAR_NAME.Name = "CMB_PAR_NAME";
+            this.CMB_PAR_NAME.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.CMB_PAR_NAME.ShadowDecoration.BorderRadius = 10;
+            this.CMB_PAR_NAME.ShadowDecoration.Enabled = true;
+            this.CMB_PAR_NAME.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(5, 0, 0, 5);
+            this.CMB_PAR_NAME.Size = new System.Drawing.Size(262, 36);
+            this.CMB_PAR_NAME.TabIndex = 27;
+            this.CMB_PAR_NAME.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // guna2ComboBox1
+            // CMB_PAR_ID
             // 
-            this.guna2ComboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderColor = System.Drawing.SystemColors.ControlLight;
-            this.guna2ComboBox1.BorderRadius = 7;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FillColor = System.Drawing.SystemColors.ControlLight;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.SystemColors.Highlight;
-            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Bodoni MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(34)))), ((int)(((byte)(52)))));
-            this.guna2ComboBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(378, 7);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.guna2ComboBox1.ShadowDecoration.BorderRadius = 10;
-            this.guna2ComboBox1.ShadowDecoration.Enabled = true;
-            this.guna2ComboBox1.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(5, 0, 0, 5);
-            this.guna2ComboBox1.Size = new System.Drawing.Size(101, 36);
-            this.guna2ComboBox1.TabIndex = 27;
-            this.guna2ComboBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.CMB_PAR_ID.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.CMB_PAR_ID.BackColor = System.Drawing.Color.Transparent;
+            this.CMB_PAR_ID.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.CMB_PAR_ID.BorderRadius = 7;
+            this.CMB_PAR_ID.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.CMB_PAR_ID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CMB_PAR_ID.FillColor = System.Drawing.SystemColors.ControlLight;
+            this.CMB_PAR_ID.FocusedColor = System.Drawing.SystemColors.Highlight;
+            this.CMB_PAR_ID.FocusedState.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.CMB_PAR_ID.Font = new System.Drawing.Font("Bodoni MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CMB_PAR_ID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(34)))), ((int)(((byte)(52)))));
+            this.CMB_PAR_ID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CMB_PAR_ID.ItemHeight = 30;
+            this.CMB_PAR_ID.Location = new System.Drawing.Point(378, 7);
+            this.CMB_PAR_ID.Name = "CMB_PAR_ID";
+            this.CMB_PAR_ID.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.CMB_PAR_ID.ShadowDecoration.BorderRadius = 10;
+            this.CMB_PAR_ID.ShadowDecoration.Enabled = true;
+            this.CMB_PAR_ID.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(5, 0, 0, 5);
+            this.CMB_PAR_ID.Size = new System.Drawing.Size(101, 36);
+            this.CMB_PAR_ID.TabIndex = 27;
+            this.CMB_PAR_ID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // labelControl7
             // 
@@ -213,7 +268,6 @@ namespace SMART_NUSERY_FORMS_2024.FORMS
             // 
             // LBL_CHANGE
             // 
-            this.LBL_CHANGE.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LBL_CHANGE.Appearance.Font = new System.Drawing.Font("Arabic Typesetting", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBL_CHANGE.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(159)))));
             this.LBL_CHANGE.Appearance.Options.UseFont = true;
@@ -221,18 +275,18 @@ namespace SMART_NUSERY_FORMS_2024.FORMS
             this.LBL_CHANGE.Appearance.Options.UseTextOptions = true;
             this.LBL_CHANGE.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.LBL_CHANGE.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.LBL_CHANGE.Location = new System.Drawing.Point(153, 10);
+            this.LBL_CHANGE.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LBL_CHANGE.Location = new System.Drawing.Point(0, 0);
             this.LBL_CHANGE.Name = "LBL_CHANGE";
-            this.LBL_CHANGE.Size = new System.Drawing.Size(325, 36);
+            this.LBL_CHANGE.Size = new System.Drawing.Size(630, 56);
             this.LBL_CHANGE.TabIndex = 38;
-            this.LBL_CHANGE.Text = "INTER DATA";
             // 
             // panelControl11
             // 
             this.panelControl11.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.panelControl11.Appearance.Options.UseBackColor = true;
             this.panelControl11.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl11.Controls.Add(this.guna2TextBox3);
+            this.panelControl11.Controls.Add(this.TXT_CLD_LVL);
             this.panelControl11.Controls.Add(this.labelControl6);
             this.panelControl11.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl11.Location = new System.Drawing.Point(2, 338);
@@ -240,35 +294,35 @@ namespace SMART_NUSERY_FORMS_2024.FORMS
             this.panelControl11.Size = new System.Drawing.Size(630, 56);
             this.panelControl11.TabIndex = 0;
             // 
-            // guna2TextBox3
+            // TXT_CLD_LVL
             // 
-            this.guna2TextBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2TextBox3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox3.BorderColor = System.Drawing.SystemColors.ControlLight;
-            this.guna2TextBox3.BorderRadius = 7;
-            this.guna2TextBox3.BorderThickness = 2;
-            this.guna2TextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox3.DefaultText = "";
-            this.guna2TextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.FillColor = System.Drawing.SystemColors.ControlLight;
-            this.guna2TextBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(34)))), ((int)(((byte)(52)))));
-            this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.Location = new System.Drawing.Point(36, 8);
-            this.guna2TextBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox3.Name = "guna2TextBox3";
-            this.guna2TextBox3.PasswordChar = '\0';
-            this.guna2TextBox3.PlaceholderText = "";
-            this.guna2TextBox3.SelectedText = "";
-            this.guna2TextBox3.ShadowDecoration.BorderRadius = 7;
-            this.guna2TextBox3.ShadowDecoration.Enabled = true;
-            this.guna2TextBox3.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(5, 0, 0, 5);
-            this.guna2TextBox3.Size = new System.Drawing.Size(443, 36);
-            this.guna2TextBox3.TabIndex = 36;
+            this.TXT_CLD_LVL.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.TXT_CLD_LVL.BackColor = System.Drawing.Color.Transparent;
+            this.TXT_CLD_LVL.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.TXT_CLD_LVL.BorderRadius = 7;
+            this.TXT_CLD_LVL.BorderThickness = 2;
+            this.TXT_CLD_LVL.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TXT_CLD_LVL.DefaultText = "";
+            this.TXT_CLD_LVL.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.TXT_CLD_LVL.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.TXT_CLD_LVL.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TXT_CLD_LVL.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TXT_CLD_LVL.FillColor = System.Drawing.SystemColors.ControlLight;
+            this.TXT_CLD_LVL.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TXT_CLD_LVL.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.TXT_CLD_LVL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(34)))), ((int)(((byte)(52)))));
+            this.TXT_CLD_LVL.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TXT_CLD_LVL.Location = new System.Drawing.Point(36, 8);
+            this.TXT_CLD_LVL.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TXT_CLD_LVL.Name = "TXT_CLD_LVL";
+            this.TXT_CLD_LVL.PasswordChar = '\0';
+            this.TXT_CLD_LVL.PlaceholderText = "";
+            this.TXT_CLD_LVL.SelectedText = "";
+            this.TXT_CLD_LVL.ShadowDecoration.BorderRadius = 7;
+            this.TXT_CLD_LVL.ShadowDecoration.Enabled = true;
+            this.TXT_CLD_LVL.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(5, 0, 0, 5);
+            this.TXT_CLD_LVL.Size = new System.Drawing.Size(443, 36);
+            this.TXT_CLD_LVL.TabIndex = 36;
             // 
             // labelControl6
             // 
@@ -289,7 +343,7 @@ namespace SMART_NUSERY_FORMS_2024.FORMS
             this.panelControl10.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.panelControl10.Appearance.Options.UseBackColor = true;
             this.panelControl10.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl10.Controls.Add(this.CMB_PAR_CODE);
+            this.panelControl10.Controls.Add(this.CMB_CLD_GEN);
             this.panelControl10.Controls.Add(this.labelControl5);
             this.panelControl10.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl10.Location = new System.Drawing.Point(2, 282);
@@ -297,30 +351,30 @@ namespace SMART_NUSERY_FORMS_2024.FORMS
             this.panelControl10.Size = new System.Drawing.Size(630, 56);
             this.panelControl10.TabIndex = 0;
             // 
-            // CMB_PAR_CODE
+            // CMB_CLD_GEN
             // 
-            this.CMB_PAR_CODE.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.CMB_PAR_CODE.BackColor = System.Drawing.Color.Transparent;
-            this.CMB_PAR_CODE.BorderColor = System.Drawing.SystemColors.ControlLight;
-            this.CMB_PAR_CODE.BorderRadius = 7;
-            this.CMB_PAR_CODE.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.CMB_PAR_CODE.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CMB_PAR_CODE.FillColor = System.Drawing.SystemColors.ControlLight;
-            this.CMB_PAR_CODE.FocusedColor = System.Drawing.SystemColors.Highlight;
-            this.CMB_PAR_CODE.FocusedState.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.CMB_PAR_CODE.Font = new System.Drawing.Font("Bodoni MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CMB_PAR_CODE.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(34)))), ((int)(((byte)(52)))));
-            this.CMB_PAR_CODE.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.CMB_PAR_CODE.ItemHeight = 30;
-            this.CMB_PAR_CODE.Location = new System.Drawing.Point(378, 12);
-            this.CMB_PAR_CODE.Name = "CMB_PAR_CODE";
-            this.CMB_PAR_CODE.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.CMB_PAR_CODE.ShadowDecoration.BorderRadius = 10;
-            this.CMB_PAR_CODE.ShadowDecoration.Enabled = true;
-            this.CMB_PAR_CODE.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(5, 0, 0, 5);
-            this.CMB_PAR_CODE.Size = new System.Drawing.Size(101, 36);
-            this.CMB_PAR_CODE.TabIndex = 27;
-            this.CMB_PAR_CODE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.CMB_CLD_GEN.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.CMB_CLD_GEN.BackColor = System.Drawing.Color.Transparent;
+            this.CMB_CLD_GEN.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.CMB_CLD_GEN.BorderRadius = 7;
+            this.CMB_CLD_GEN.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.CMB_CLD_GEN.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CMB_CLD_GEN.FillColor = System.Drawing.SystemColors.ControlLight;
+            this.CMB_CLD_GEN.FocusedColor = System.Drawing.SystemColors.Highlight;
+            this.CMB_CLD_GEN.FocusedState.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.CMB_CLD_GEN.Font = new System.Drawing.Font("Bodoni MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CMB_CLD_GEN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(34)))), ((int)(((byte)(52)))));
+            this.CMB_CLD_GEN.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CMB_CLD_GEN.ItemHeight = 30;
+            this.CMB_CLD_GEN.Location = new System.Drawing.Point(265, 12);
+            this.CMB_CLD_GEN.Name = "CMB_CLD_GEN";
+            this.CMB_CLD_GEN.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.CMB_CLD_GEN.ShadowDecoration.BorderRadius = 10;
+            this.CMB_CLD_GEN.ShadowDecoration.Enabled = true;
+            this.CMB_CLD_GEN.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(5, 0, 0, 5);
+            this.CMB_CLD_GEN.Size = new System.Drawing.Size(214, 36);
+            this.CMB_CLD_GEN.TabIndex = 27;
+            this.CMB_CLD_GEN.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // labelControl5
             // 
@@ -341,7 +395,7 @@ namespace SMART_NUSERY_FORMS_2024.FORMS
             this.panelControl9.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.panelControl9.Appearance.Options.UseBackColor = true;
             this.panelControl9.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl9.Controls.Add(this.DATE_PIRTH_DATE);
+            this.panelControl9.Controls.Add(this.DTP_CLD_P_DATE);
             this.panelControl9.Controls.Add(this.labelControl4);
             this.panelControl9.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl9.Location = new System.Drawing.Point(2, 226);
@@ -349,31 +403,31 @@ namespace SMART_NUSERY_FORMS_2024.FORMS
             this.panelControl9.Size = new System.Drawing.Size(630, 56);
             this.panelControl9.TabIndex = 0;
             // 
-            // DATE_PIRTH_DATE
+            // DTP_CLD_P_DATE
             // 
-            this.DATE_PIRTH_DATE.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.DATE_PIRTH_DATE.BackColor = System.Drawing.Color.Transparent;
-            this.DATE_PIRTH_DATE.BorderColor = System.Drawing.SystemColors.ControlLight;
-            this.DATE_PIRTH_DATE.BorderRadius = 7;
-            this.DATE_PIRTH_DATE.BorderThickness = 1;
-            this.DATE_PIRTH_DATE.Checked = true;
-            this.DATE_PIRTH_DATE.FillColor = System.Drawing.SystemColors.ControlLight;
-            this.DATE_PIRTH_DATE.FocusedColor = System.Drawing.SystemColors.Highlight;
-            this.DATE_PIRTH_DATE.Font = new System.Drawing.Font("Bodoni MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DATE_PIRTH_DATE.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(34)))), ((int)(((byte)(52)))));
-            this.DATE_PIRTH_DATE.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.DATE_PIRTH_DATE.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.DATE_PIRTH_DATE.Location = new System.Drawing.Point(36, 11);
-            this.DATE_PIRTH_DATE.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.DATE_PIRTH_DATE.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.DATE_PIRTH_DATE.Name = "DATE_PIRTH_DATE";
-            this.DATE_PIRTH_DATE.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.DATE_PIRTH_DATE.ShadowDecoration.BorderRadius = 10;
-            this.DATE_PIRTH_DATE.ShadowDecoration.Enabled = true;
-            this.DATE_PIRTH_DATE.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(5, 0, 0, 5);
-            this.DATE_PIRTH_DATE.Size = new System.Drawing.Size(443, 36);
-            this.DATE_PIRTH_DATE.TabIndex = 30;
-            this.DATE_PIRTH_DATE.Value = new System.DateTime(2023, 10, 18, 15, 44, 45, 127);
+            this.DTP_CLD_P_DATE.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.DTP_CLD_P_DATE.BackColor = System.Drawing.Color.Transparent;
+            this.DTP_CLD_P_DATE.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.DTP_CLD_P_DATE.BorderRadius = 7;
+            this.DTP_CLD_P_DATE.BorderThickness = 1;
+            this.DTP_CLD_P_DATE.Checked = true;
+            this.DTP_CLD_P_DATE.FillColor = System.Drawing.SystemColors.ControlLight;
+            this.DTP_CLD_P_DATE.FocusedColor = System.Drawing.SystemColors.Highlight;
+            this.DTP_CLD_P_DATE.Font = new System.Drawing.Font("Bodoni MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DTP_CLD_P_DATE.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(34)))), ((int)(((byte)(52)))));
+            this.DTP_CLD_P_DATE.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.DTP_CLD_P_DATE.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.DTP_CLD_P_DATE.Location = new System.Drawing.Point(36, 11);
+            this.DTP_CLD_P_DATE.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.DTP_CLD_P_DATE.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.DTP_CLD_P_DATE.Name = "DTP_CLD_P_DATE";
+            this.DTP_CLD_P_DATE.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.DTP_CLD_P_DATE.ShadowDecoration.BorderRadius = 10;
+            this.DTP_CLD_P_DATE.ShadowDecoration.Enabled = true;
+            this.DTP_CLD_P_DATE.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(5, 0, 0, 5);
+            this.DTP_CLD_P_DATE.Size = new System.Drawing.Size(443, 36);
+            this.DTP_CLD_P_DATE.TabIndex = 30;
+            this.DTP_CLD_P_DATE.Value = new System.DateTime(2023, 10, 18, 15, 44, 45, 127);
             // 
             // labelControl4
             // 
@@ -394,7 +448,7 @@ namespace SMART_NUSERY_FORMS_2024.FORMS
             this.panelControl7.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.panelControl7.Appearance.Options.UseBackColor = true;
             this.panelControl7.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl7.Controls.Add(this.guna2TextBox2);
+            this.panelControl7.Controls.Add(this.TXT_CLD_NAME);
             this.panelControl7.Controls.Add(this.labelControl3);
             this.panelControl7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl7.Location = new System.Drawing.Point(2, 170);
@@ -402,35 +456,35 @@ namespace SMART_NUSERY_FORMS_2024.FORMS
             this.panelControl7.Size = new System.Drawing.Size(630, 56);
             this.panelControl7.TabIndex = 0;
             // 
-            // guna2TextBox2
+            // TXT_CLD_NAME
             // 
-            this.guna2TextBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2TextBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox2.BorderColor = System.Drawing.SystemColors.ControlLight;
-            this.guna2TextBox2.BorderRadius = 7;
-            this.guna2TextBox2.BorderThickness = 2;
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.FillColor = System.Drawing.SystemColors.ControlLight;
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(34)))), ((int)(((byte)(52)))));
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Location = new System.Drawing.Point(36, 11);
-            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PasswordChar = '\0';
-            this.guna2TextBox2.PlaceholderText = "";
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.ShadowDecoration.BorderRadius = 7;
-            this.guna2TextBox2.ShadowDecoration.Enabled = true;
-            this.guna2TextBox2.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(5, 0, 0, 5);
-            this.guna2TextBox2.Size = new System.Drawing.Size(443, 36);
-            this.guna2TextBox2.TabIndex = 36;
+            this.TXT_CLD_NAME.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.TXT_CLD_NAME.BackColor = System.Drawing.Color.Transparent;
+            this.TXT_CLD_NAME.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.TXT_CLD_NAME.BorderRadius = 7;
+            this.TXT_CLD_NAME.BorderThickness = 2;
+            this.TXT_CLD_NAME.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TXT_CLD_NAME.DefaultText = "";
+            this.TXT_CLD_NAME.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.TXT_CLD_NAME.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.TXT_CLD_NAME.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TXT_CLD_NAME.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TXT_CLD_NAME.FillColor = System.Drawing.SystemColors.ControlLight;
+            this.TXT_CLD_NAME.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TXT_CLD_NAME.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.TXT_CLD_NAME.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(34)))), ((int)(((byte)(52)))));
+            this.TXT_CLD_NAME.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TXT_CLD_NAME.Location = new System.Drawing.Point(36, 11);
+            this.TXT_CLD_NAME.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TXT_CLD_NAME.Name = "TXT_CLD_NAME";
+            this.TXT_CLD_NAME.PasswordChar = '\0';
+            this.TXT_CLD_NAME.PlaceholderText = "";
+            this.TXT_CLD_NAME.SelectedText = "";
+            this.TXT_CLD_NAME.ShadowDecoration.BorderRadius = 7;
+            this.TXT_CLD_NAME.ShadowDecoration.Enabled = true;
+            this.TXT_CLD_NAME.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(5, 0, 0, 5);
+            this.TXT_CLD_NAME.Size = new System.Drawing.Size(443, 36);
+            this.TXT_CLD_NAME.TabIndex = 36;
             // 
             // labelControl3
             // 
@@ -451,7 +505,7 @@ namespace SMART_NUSERY_FORMS_2024.FORMS
             this.panelControl6.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.panelControl6.Appearance.Options.UseBackColor = true;
             this.panelControl6.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl6.Controls.Add(this.guna2TextBox1);
+            this.panelControl6.Controls.Add(this.TXT_CLD_CODE);
             this.panelControl6.Controls.Add(this.labelControl1);
             this.panelControl6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl6.Location = new System.Drawing.Point(2, 114);
@@ -459,35 +513,35 @@ namespace SMART_NUSERY_FORMS_2024.FORMS
             this.panelControl6.Size = new System.Drawing.Size(630, 56);
             this.panelControl6.TabIndex = 0;
             // 
-            // guna2TextBox1
+            // TXT_CLD_CODE
             // 
-            this.guna2TextBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2TextBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox1.BorderColor = System.Drawing.SystemColors.ControlLight;
-            this.guna2TextBox1.BorderRadius = 7;
-            this.guna2TextBox1.BorderThickness = 2;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FillColor = System.Drawing.SystemColors.ControlLight;
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(34)))), ((int)(((byte)(52)))));
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(36, 14);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.ShadowDecoration.BorderRadius = 7;
-            this.guna2TextBox1.ShadowDecoration.Enabled = true;
-            this.guna2TextBox1.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(5, 0, 0, 5);
-            this.guna2TextBox1.Size = new System.Drawing.Size(443, 36);
-            this.guna2TextBox1.TabIndex = 36;
+            this.TXT_CLD_CODE.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.TXT_CLD_CODE.BackColor = System.Drawing.Color.Transparent;
+            this.TXT_CLD_CODE.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.TXT_CLD_CODE.BorderRadius = 7;
+            this.TXT_CLD_CODE.BorderThickness = 2;
+            this.TXT_CLD_CODE.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TXT_CLD_CODE.DefaultText = "";
+            this.TXT_CLD_CODE.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.TXT_CLD_CODE.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.TXT_CLD_CODE.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TXT_CLD_CODE.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TXT_CLD_CODE.FillColor = System.Drawing.SystemColors.ControlLight;
+            this.TXT_CLD_CODE.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TXT_CLD_CODE.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.TXT_CLD_CODE.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(34)))), ((int)(((byte)(52)))));
+            this.TXT_CLD_CODE.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TXT_CLD_CODE.Location = new System.Drawing.Point(36, 14);
+            this.TXT_CLD_CODE.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TXT_CLD_CODE.Name = "TXT_CLD_CODE";
+            this.TXT_CLD_CODE.PasswordChar = '\0';
+            this.TXT_CLD_CODE.PlaceholderText = "";
+            this.TXT_CLD_CODE.SelectedText = "";
+            this.TXT_CLD_CODE.ShadowDecoration.BorderRadius = 7;
+            this.TXT_CLD_CODE.ShadowDecoration.Enabled = true;
+            this.TXT_CLD_CODE.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(5, 0, 0, 5);
+            this.TXT_CLD_CODE.Size = new System.Drawing.Size(443, 36);
+            this.TXT_CLD_CODE.TabIndex = 36;
             // 
             // labelControl1
             // 
@@ -508,7 +562,7 @@ namespace SMART_NUSERY_FORMS_2024.FORMS
             this.panelControl5.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.panelControl5.Appearance.Options.UseBackColor = true;
             this.panelControl5.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl5.Controls.Add(this.TXT_ADD);
+            this.panelControl5.Controls.Add(this.TXT_CLD_ID);
             this.panelControl5.Controls.Add(this.labelControl2);
             this.panelControl5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl5.Location = new System.Drawing.Point(2, 58);
@@ -516,35 +570,35 @@ namespace SMART_NUSERY_FORMS_2024.FORMS
             this.panelControl5.Size = new System.Drawing.Size(630, 56);
             this.panelControl5.TabIndex = 0;
             // 
-            // TXT_ADD
+            // TXT_CLD_ID
             // 
-            this.TXT_ADD.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.TXT_ADD.BackColor = System.Drawing.Color.Transparent;
-            this.TXT_ADD.BorderColor = System.Drawing.SystemColors.ControlLight;
-            this.TXT_ADD.BorderRadius = 7;
-            this.TXT_ADD.BorderThickness = 2;
-            this.TXT_ADD.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TXT_ADD.DefaultText = "";
-            this.TXT_ADD.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.TXT_ADD.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.TXT_ADD.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TXT_ADD.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TXT_ADD.FillColor = System.Drawing.SystemColors.ControlLight;
-            this.TXT_ADD.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TXT_ADD.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.TXT_ADD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(34)))), ((int)(((byte)(52)))));
-            this.TXT_ADD.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TXT_ADD.Location = new System.Drawing.Point(36, 11);
-            this.TXT_ADD.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.TXT_ADD.Name = "TXT_ADD";
-            this.TXT_ADD.PasswordChar = '\0';
-            this.TXT_ADD.PlaceholderText = "";
-            this.TXT_ADD.SelectedText = "";
-            this.TXT_ADD.ShadowDecoration.BorderRadius = 7;
-            this.TXT_ADD.ShadowDecoration.Enabled = true;
-            this.TXT_ADD.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(5, 0, 0, 5);
-            this.TXT_ADD.Size = new System.Drawing.Size(443, 36);
-            this.TXT_ADD.TabIndex = 36;
+            this.TXT_CLD_ID.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.TXT_CLD_ID.BackColor = System.Drawing.Color.Transparent;
+            this.TXT_CLD_ID.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.TXT_CLD_ID.BorderRadius = 7;
+            this.TXT_CLD_ID.BorderThickness = 2;
+            this.TXT_CLD_ID.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TXT_CLD_ID.DefaultText = "";
+            this.TXT_CLD_ID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.TXT_CLD_ID.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.TXT_CLD_ID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TXT_CLD_ID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TXT_CLD_ID.FillColor = System.Drawing.SystemColors.ControlLight;
+            this.TXT_CLD_ID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TXT_CLD_ID.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.TXT_CLD_ID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(34)))), ((int)(((byte)(52)))));
+            this.TXT_CLD_ID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TXT_CLD_ID.Location = new System.Drawing.Point(36, 11);
+            this.TXT_CLD_ID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TXT_CLD_ID.Name = "TXT_CLD_ID";
+            this.TXT_CLD_ID.PasswordChar = '\0';
+            this.TXT_CLD_ID.PlaceholderText = "";
+            this.TXT_CLD_ID.SelectedText = "";
+            this.TXT_CLD_ID.ShadowDecoration.BorderRadius = 7;
+            this.TXT_CLD_ID.ShadowDecoration.Enabled = true;
+            this.TXT_CLD_ID.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(5, 0, 0, 5);
+            this.TXT_CLD_ID.Size = new System.Drawing.Size(443, 36);
+            this.TXT_CLD_ID.TabIndex = 36;
             // 
             // labelControl2
             // 
@@ -626,10 +680,44 @@ namespace SMART_NUSERY_FORMS_2024.FORMS
             this.layoutControlGroup6.CustomizationFormText = "layoutControlGroup6";
             this.layoutControlGroup6.ExpandButtonVisible = true;
             this.layoutControlGroup6.GroupBordersVisible = false;
+            this.layoutControlGroup6.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem2});
             this.layoutControlGroup6.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup6.Name = "layoutControlGroup6";
             this.layoutControlGroup6.Padding = new DevExpress.XtraLayout.Utils.Padding(9, 9, 9, 9);
             this.layoutControlGroup6.Size = new System.Drawing.Size(636, 590);
+            // 
+            // layoutControlItem2
+            // 
+            this.layoutControlItem2.Control = this.panelContainer;
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(636, 590);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem2.TextVisible = false;
+            // 
+            // cmButton1
+            // 
+            this.cmButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmButton1.BackColor = System.Drawing.Color.Transparent;
+            this.cmButton1.BackgroundColor = System.Drawing.Color.Transparent;
+            this.cmButton1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(34)))), ((int)(((byte)(52)))));
+            this.cmButton1.BorderRadius = 20;
+            this.cmButton1.BorderSize = 0;
+            this.cmButton1.FlatAppearance.BorderSize = 0;
+            this.cmButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(153)))), ((int)(((byte)(193)))));
+            this.cmButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(188)))), ((int)(((byte)(214)))));
+            this.cmButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmButton1.Font = new System.Drawing.Font("AF_Najed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.cmButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(34)))), ((int)(((byte)(52)))));
+            this.cmButton1.Image = ((System.Drawing.Image)(resources.GetObject("cmButton1.Image")));
+            this.cmButton1.Location = new System.Drawing.Point(36, 4);
+            this.cmButton1.Name = "cmButton1";
+            this.cmButton1.Size = new System.Drawing.Size(43, 43);
+            this.cmButton1.TabIndex = 28;
+            this.cmButton1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(34)))), ((int)(((byte)(52)))));
+            this.cmButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.cmButton1.UseVisualStyleBackColor = false;
             // 
             // CHILD_FRM
             // 
@@ -646,6 +734,7 @@ namespace SMART_NUSERY_FORMS_2024.FORMS
             this.Controls.SetChildIndex(this.layoutControl1, 0);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            this.panelContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl8)).EndInit();
@@ -677,6 +766,7 @@ namespace SMART_NUSERY_FORMS_2024.FORMS
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -701,20 +791,25 @@ namespace SMART_NUSERY_FORMS_2024.FORMS
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup6;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox2;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private Guna.UI2.WinForms.Guna2ComboBox CMB_PAR_NAME;
+        private Guna.UI2.WinForms.Guna2ComboBox CMB_PAR_ID;
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraEditors.LabelControl LBL_CHANGE;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
+        private Guna.UI2.WinForms.Guna2TextBox TXT_CLD_LVL;
         private DevExpress.XtraEditors.LabelControl labelControl6;
-        private Guna.UI2.WinForms.Guna2ComboBox CMB_PAR_CODE;
+        private Guna.UI2.WinForms.Guna2ComboBox CMB_CLD_GEN;
         private DevExpress.XtraEditors.LabelControl labelControl5;
-        private Guna.UI2.WinForms.Guna2DateTimePicker DATE_PIRTH_DATE;
+        private Guna.UI2.WinForms.Guna2DateTimePicker DTP_CLD_P_DATE;
         private DevExpress.XtraEditors.LabelControl labelControl4;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
+        private Guna.UI2.WinForms.Guna2TextBox TXT_CLD_NAME;
         private DevExpress.XtraEditors.LabelControl labelControl3;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox TXT_CLD_CODE;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private Guna.UI2.WinForms.Guna2TextBox TXT_ADD;
+        private Guna.UI2.WinForms.Guna2TextBox TXT_CLD_ID;
+        private Guna.UI2.WinForms.Guna2ShadowPanel panelContainer;
+        private DevExpress.XtraEditors.LabelControl labelControl8;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+        private DevExpress.XtraEditors.LabelControl labelControl9;
+        private CMCodeAdvance.CMControls.CMButton cmButton1;
     }
 }

@@ -36,11 +36,8 @@ namespace SMART_NURSERT_DATABASE_2024
         public virtual DbSet<EVALUATION_TBL> EVALUATION_TBL { get; set; }
         public virtual DbSet<EVENT_SUBS_TBL> EVENT_SUBS_TBL { get; set; }
         public virtual DbSet<EVENTS_TBL> EVENTS_TBL { get; set; }
-        public virtual DbSet<FATHER_INFO_TBL> FATHER_INFO_TBL { get; set; }
         public virtual DbSet<MONTHLY_SUBS_TBL> MONTHLY_SUBS_TBL { get; set; }
-        public virtual DbSet<MOTHER_INFO_TBL> MOTHER_INFO_TBL { get; set; }
         public virtual DbSet<ORDER_TBL> ORDER_TBL { get; set; }
-        public virtual DbSet<PARENT_INFO_TBL> PARENT_INFO_TBL { get; set; }
         public virtual DbSet<SUB_SUBSCRIPTION_TBL> SUB_SUBSCRIPTION_TBL { get; set; }
         public virtual DbSet<SUBJECT_PER_CLASS_TBL> SUBJECT_PER_CLASS_TBL { get; set; }
         public virtual DbSet<SUBJECT_TBL> SUBJECT_TBL { get; set; }
@@ -49,5 +46,6 @@ namespace SMART_NURSERT_DATABASE_2024
         public virtual DbSet<USERS_TBL> USERS_TBL { get; set; }
         public virtual DbSet<VEHICLE_TBL> VEHICLE_TBL { get; set; }
         public virtual DbSet<VISIT_TBL> VISIT_TBL { get; set; }
+        public virtual DbSet<PARENT_INFO_TBL> PARENT_INFO_TBL { get; set; }
     }
 }

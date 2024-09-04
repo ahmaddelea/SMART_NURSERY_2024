@@ -23,12 +23,21 @@ namespace SMART_NURSERT_DATABASE_2024
         public decimal PAR_ID { get; set; }
         public Nullable<decimal> PAR_CODE { get; set; }
         public string PAR_NAME { get; set; }
-        public Nullable<decimal> FATHER_ID { get; set; }
-        public Nullable<decimal> MOTHER_ID { get; set; }
+        public string FATHER_NAME { get; set; }
+        public Nullable<decimal> FATHER_SSID { get; set; }
+        public string FATHER_MOB { get; set; }
+        public string FATHER_JOB { get; set; }
+        public string FATHER_EMAIL { get; set; }
+        public Nullable<bool> FATHER_STATE { get; set; }
+        public string MOTHER_NAME { get; set; }
+        public Nullable<decimal> MOTHER_SSID { get; set; }
+        public string MOTHER_MOB { get; set; }
+        public string MOTHER_JOB { get; set; }
+        public string MOTHER_EMAIL { get; set; }
+        public Nullable<bool> MOTHER_STATE { get; set; }
+        public string PAR_ADDRESS { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CHILD_TBL> CHILD_TBL { get; set; }
-        public virtual FATHER_INFO_TBL FATHER_INFO_TBL { get; set; }
-        public virtual MOTHER_INFO_TBL MOTHER_INFO_TBL { get; set; }
     }
 }

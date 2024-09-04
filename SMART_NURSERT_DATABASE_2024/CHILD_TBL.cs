@@ -35,7 +35,6 @@ namespace SMART_NURSERT_DATABASE_2024
         public string CLD_LVL { get; set; }
         public Nullable<decimal> PAR_ID { get; set; }
     
-        public virtual PARENT_INFO_TBL PARENT_INFO_TBL { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CLASSES_TBL> CLASSES_TBL { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
@@ -52,5 +51,6 @@ namespace SMART_NURSERT_DATABASE_2024
         public virtual ICollection<ORDER_TBL> ORDER_TBL { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<VISIT_TBL> VISIT_TBL { get; set; }
+        public virtual PARENT_INFO_TBL PARENT_INFO_TBL { get; set; }
     }
 }

@@ -146,19 +146,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="FATHER_INFO_TBL">
-      <EntityTypeMapping TypeName="SMART_NURSERY_2024Model.FATHER_INFO_TBL">
-        <MappingFragment StoreEntitySet="FATHER_INFO_TBL">
-          <ScalarProperty Name="FATHER_ID" ColumnName="FATHER_ID" />
-          <ScalarProperty Name="FATHER_CODE" ColumnName="FATHER_CODE" />
-          <ScalarProperty Name="FATHER_NAME" ColumnName="FATHER_NAME" />
-          <ScalarProperty Name="FATHER_SSID" ColumnName="FATHER_SSID" />
-          <ScalarProperty Name="FATHER_MOB" ColumnName="FATHER_MOB" />
-          <ScalarProperty Name="FATHER_JOB" ColumnName="FATHER_JOB" />
-          <ScalarProperty Name="FATHER_EMAIL" ColumnName="FATHER_EMAIL" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="MONTHLY_SUBS_TBL">
       <EntityTypeMapping TypeName="SMART_NURSERY_2024Model.MONTHLY_SUBS_TBL">
         <MappingFragment StoreEntitySet="MONTHLY_SUBS_TBL">
@@ -170,19 +157,6 @@
           <ScalarProperty Name="M_SUBS_STATE" ColumnName="M_SUBS_STATE" />
           <ScalarProperty Name="CLD_ID" ColumnName="CLD_ID" />
           <ScalarProperty Name="SUB_SUBS_ID" ColumnName="SUB_SUBS_ID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="MOTHER_INFO_TBL">
-      <EntityTypeMapping TypeName="SMART_NURSERY_2024Model.MOTHER_INFO_TBL">
-        <MappingFragment StoreEntitySet="MOTHER_INFO_TBL">
-          <ScalarProperty Name="MOTHER_ID" ColumnName="MOTHER_ID" />
-          <ScalarProperty Name="MOTHER_CODE" ColumnName="MOTHER_CODE" />
-          <ScalarProperty Name="MOTHER_NAME" ColumnName="MOTHER_NAME" />
-          <ScalarProperty Name="MOTHER_SSID" ColumnName="MOTHER_SSID" />
-          <ScalarProperty Name="MOTHER_MOB" ColumnName="MOTHER_MOB" />
-          <ScalarProperty Name="MOTHER_JOB" ColumnName="MOTHER_JOB" />
-          <ScalarProperty Name="MOTHER_EMAIL" ColumnName="MOTHER_EMAIL" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -201,17 +175,6 @@
           <ScalarProperty Name="CLD_ID" ColumnName="CLD_ID" />
           <ScalarProperty Name="BOOK_ID" ColumnName="BOOK_ID" />
           <ScalarProperty Name="UNIFORM_ID" ColumnName="UNIFORM_ID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="PARENT_INFO_TBL">
-      <EntityTypeMapping TypeName="SMART_NURSERY_2024Model.PARENT_INFO_TBL">
-        <MappingFragment StoreEntitySet="PARENT_INFO_TBL">
-          <ScalarProperty Name="PAR_ID" ColumnName="PAR_ID" />
-          <ScalarProperty Name="PAR_CODE" ColumnName="PAR_CODE" />
-          <ScalarProperty Name="PAR_NAME" ColumnName="PAR_NAME" />
-          <ScalarProperty Name="FATHER_ID" ColumnName="FATHER_ID" />
-          <ScalarProperty Name="MOTHER_ID" ColumnName="MOTHER_ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -307,6 +270,28 @@
           <ScalarProperty Name="VST_DATE" ColumnName="VST_DATE" />
           <ScalarProperty Name="VST_TIME" ColumnName="VST_TIME" />
           <ScalarProperty Name="CLD_ID" ColumnName="CLD_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PARENT_INFO_TBL">
+      <EntityTypeMapping TypeName="SMART_NURSERY_2024Model.PARENT_INFO_TBL">
+        <MappingFragment StoreEntitySet="PARENT_INFO_TBL">
+          <ScalarProperty Name="PAR_ADDRESS" ColumnName="PAR_ADDRESS" />
+          <ScalarProperty Name="MOTHER_STATE" ColumnName="MOTHER_STATE" />
+          <ScalarProperty Name="MOTHER_EMAIL" ColumnName="MOTHER_EMAIL" />
+          <ScalarProperty Name="MOTHER_JOB" ColumnName="MOTHER_JOB" />
+          <ScalarProperty Name="MOTHER_MOB" ColumnName="MOTHER_MOB" />
+          <ScalarProperty Name="MOTHER_SSID" ColumnName="MOTHER_SSID" />
+          <ScalarProperty Name="MOTHER_NAME" ColumnName="MOTHER_NAME" />
+          <ScalarProperty Name="FATHER_STATE" ColumnName="FATHER_STATE" />
+          <ScalarProperty Name="FATHER_EMAIL" ColumnName="FATHER_EMAIL" />
+          <ScalarProperty Name="FATHER_JOB" ColumnName="FATHER_JOB" />
+          <ScalarProperty Name="FATHER_MOB" ColumnName="FATHER_MOB" />
+          <ScalarProperty Name="FATHER_SSID" ColumnName="FATHER_SSID" />
+          <ScalarProperty Name="FATHER_NAME" ColumnName="FATHER_NAME" />
+          <ScalarProperty Name="PAR_NAME" ColumnName="PAR_NAME" />
+          <ScalarProperty Name="PAR_CODE" ColumnName="PAR_CODE" />
+          <ScalarProperty Name="PAR_ID" ColumnName="PAR_ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

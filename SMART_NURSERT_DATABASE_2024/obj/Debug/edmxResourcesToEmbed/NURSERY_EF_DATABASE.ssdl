@@ -134,18 +134,6 @@
     <Property Name="EVT_PIC2" Type="bit" />
     <Property Name="CLD_ID" Type="numeric" Precision="18" Scale="0" />
   </EntityType>
-  <EntityType Name="FATHER_INFO_TBL">
-    <Key>
-      <PropertyRef Name="FATHER_ID" />
-    </Key>
-    <Property Name="FATHER_ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="FATHER_CODE" Type="numeric" Precision="18" Scale="0" />
-    <Property Name="FATHER_NAME" Type="varchar(max)" />
-    <Property Name="FATHER_SSID" Type="varchar" MaxLength="50" />
-    <Property Name="FATHER_MOB" Type="varchar(max)" />
-    <Property Name="FATHER_JOB" Type="varchar(max)" />
-    <Property Name="FATHER_EMAIL" Type="varchar(max)" />
-  </EntityType>
   <EntityType Name="MONTHLY_SUBS_TBL">
     <Key>
       <PropertyRef Name="M_SUBS_ID" />
@@ -158,18 +146,6 @@
     <Property Name="M_SUBS_STATE" Type="bit" />
     <Property Name="CLD_ID" Type="numeric" Precision="18" Scale="0" />
     <Property Name="SUB_SUBS_ID" Type="numeric" Precision="18" Scale="0" />
-  </EntityType>
-  <EntityType Name="MOTHER_INFO_TBL">
-    <Key>
-      <PropertyRef Name="MOTHER_ID" />
-    </Key>
-    <Property Name="MOTHER_ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="MOTHER_CODE" Type="numeric" Precision="18" Scale="0" />
-    <Property Name="MOTHER_NAME" Type="varchar(max)" />
-    <Property Name="MOTHER_SSID" Type="varchar" MaxLength="50" />
-    <Property Name="MOTHER_MOB" Type="varchar(max)" />
-    <Property Name="MOTHER_JOB" Type="varchar(max)" />
-    <Property Name="MOTHER_EMAIL" Type="varchar(max)" />
   </EntityType>
   <EntityType Name="ORDER_TBL">
     <Key>
@@ -195,8 +171,19 @@
     <Property Name="PAR_ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="PAR_CODE" Type="numeric" Precision="18" Scale="0" />
     <Property Name="PAR_NAME" Type="varchar" MaxLength="100" />
-    <Property Name="FATHER_ID" Type="numeric" Precision="18" Scale="0" />
-    <Property Name="MOTHER_ID" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="FATHER_NAME" Type="varchar(max)" />
+    <Property Name="FATHER_SSID" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="FATHER_MOB" Type="varchar(max)" />
+    <Property Name="FATHER_JOB" Type="varchar(max)" />
+    <Property Name="FATHER_EMAIL" Type="varchar(max)" />
+    <Property Name="FATHER_STATE" Type="bit" />
+    <Property Name="MOTHER_NAME" Type="varchar(max)" />
+    <Property Name="MOTHER_SSID" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="MOTHER_MOB" Type="varchar(max)" />
+    <Property Name="MOTHER_JOB" Type="varchar(max)" />
+    <Property Name="MOTHER_EMAIL" Type="varchar(max)" />
+    <Property Name="MOTHER_STATE" Type="bit" />
+    <Property Name="PAR_ADDRESS" Type="varchar(max)" />
   </EntityType>
   <EntityType Name="SUB_SUBSCRIPTION_TBL">
     <Key>
@@ -489,30 +476,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_PARENT_INFO_TBL_FATHER_INFO_TBL">
-    <End Role="FATHER_INFO_TBL" Type="Self.FATHER_INFO_TBL" Multiplicity="0..1" />
-    <End Role="PARENT_INFO_TBL" Type="Self.PARENT_INFO_TBL" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="FATHER_INFO_TBL">
-        <PropertyRef Name="FATHER_ID" />
-      </Principal>
-      <Dependent Role="PARENT_INFO_TBL">
-        <PropertyRef Name="FATHER_ID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_PARENT_INFO_TBL_MOTHER_INFO_TBL">
-    <End Role="MOTHER_INFO_TBL" Type="Self.MOTHER_INFO_TBL" Multiplicity="0..1" />
-    <End Role="PARENT_INFO_TBL" Type="Self.PARENT_INFO_TBL" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="MOTHER_INFO_TBL">
-        <PropertyRef Name="MOTHER_ID" />
-      </Principal>
-      <Dependent Role="PARENT_INFO_TBL">
-        <PropertyRef Name="MOTHER_ID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_SUBJECT_PER_CLASS_TBL_CLASSES_TBL">
     <End Role="CLASSES_TBL" Type="Self.CLASSES_TBL" Multiplicity="0..1" />
     <End Role="SUBJECT_PER_CLASS_TBL" Type="Self.SUBJECT_PER_CLASS_TBL" Multiplicity="*" />
@@ -597,9 +560,7 @@
     <EntitySet Name="EVALUATION_TBL" EntityType="Self.EVALUATION_TBL" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="EVENT_SUBS_TBL" EntityType="Self.EVENT_SUBS_TBL" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="EVENTS_TBL" EntityType="Self.EVENTS_TBL" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="FATHER_INFO_TBL" EntityType="Self.FATHER_INFO_TBL" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="MONTHLY_SUBS_TBL" EntityType="Self.MONTHLY_SUBS_TBL" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="MOTHER_INFO_TBL" EntityType="Self.MOTHER_INFO_TBL" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ORDER_TBL" EntityType="Self.ORDER_TBL" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="PARENT_INFO_TBL" EntityType="Self.PARENT_INFO_TBL" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SUB_SUBSCRIPTION_TBL" EntityType="Self.SUB_SUBSCRIPTION_TBL" Schema="dbo" store:Type="Tables" />
@@ -677,14 +638,6 @@
     <AssociationSet Name="FK_ORDER_TBL_UNIFORM_TBL" Association="Self.FK_ORDER_TBL_UNIFORM_TBL">
       <End Role="UNIFORM_TBL" EntitySet="UNIFORM_TBL" />
       <End Role="ORDER_TBL" EntitySet="ORDER_TBL" />
-    </AssociationSet>
-    <AssociationSet Name="FK_PARENT_INFO_TBL_FATHER_INFO_TBL" Association="Self.FK_PARENT_INFO_TBL_FATHER_INFO_TBL">
-      <End Role="FATHER_INFO_TBL" EntitySet="FATHER_INFO_TBL" />
-      <End Role="PARENT_INFO_TBL" EntitySet="PARENT_INFO_TBL" />
-    </AssociationSet>
-    <AssociationSet Name="FK_PARENT_INFO_TBL_MOTHER_INFO_TBL" Association="Self.FK_PARENT_INFO_TBL_MOTHER_INFO_TBL">
-      <End Role="MOTHER_INFO_TBL" EntitySet="MOTHER_INFO_TBL" />
-      <End Role="PARENT_INFO_TBL" EntitySet="PARENT_INFO_TBL" />
     </AssociationSet>
     <AssociationSet Name="FK_SUBJECT_PER_CLASS_TBL_CLASSES_TBL" Association="Self.FK_SUBJECT_PER_CLASS_TBL_CLASSES_TBL">
       <End Role="CLASSES_TBL" EntitySet="CLASSES_TBL" />
