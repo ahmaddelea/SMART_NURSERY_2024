@@ -34,6 +34,7 @@ namespace SMART_NURSERT_DATABASE_2024
         public string CLD_GEN { get; set; }
         public string CLD_LVL { get; set; }
         public Nullable<decimal> PAR_ID { get; set; }
+        public Nullable<bool> CLD_STATE { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CLASSES_TBL> CLASSES_TBL { get; set; }

@@ -26,6 +26,7 @@
           <Property Name="CLD_P_DATE" Type="date" />
           <Property Name="CLD_GEN" Type="varchar(max)" />
           <Property Name="CLD_LVL" Type="varchar(max)" />
+          <Property Name="CLD_STATE" Type="bit" />
           <Property Name="PAR_ID" Type="numeric" Precision="18" Scale="0" />
         </EntityType>
         <EntityType Name="CLASSES_TBL">
@@ -705,6 +706,7 @@
           <NavigationProperty Name="ORDER_TBL" Relationship="Self.FK_ORDER_TBL_CHILD_TBL" FromRole="CHILD_TBL" ToRole="ORDER_TBL" />
           <NavigationProperty Name="VISIT_TBL" Relationship="Self.FK_VISIT_TBL_CHILD_TBL" FromRole="CHILD_TBL" ToRole="VISIT_TBL" />
           <NavigationProperty Name="PARENT_INFO_TBL" Relationship="SMART_NURSERY_2024Model.FK_CHILD_TBL_PARENT_INFO_TBL" FromRole="CHILD_TBL" ToRole="PARENT_INFO_TBL" />
+          <Property Name="CLD_STATE" Type="Boolean" />
         </EntityType>
         <EntityType Name="CLASSES_TBL">
           <Key>
@@ -1404,6 +1406,7 @@
           <EntitySetMapping Name="CHILD_TBL">
             <EntityTypeMapping TypeName="SMART_NURSERY_2024Model.CHILD_TBL">
               <MappingFragment StoreEntitySet="CHILD_TBL">
+                <ScalarProperty Name="CLD_STATE" ColumnName="CLD_STATE" />
                 <ScalarProperty Name="CLD_ID" ColumnName="CLD_ID" />
                 <ScalarProperty Name="CLD_CODE" ColumnName="CLD_CODE" />
                 <ScalarProperty Name="CLD_NAME" ColumnName="CLD_NAME" />
