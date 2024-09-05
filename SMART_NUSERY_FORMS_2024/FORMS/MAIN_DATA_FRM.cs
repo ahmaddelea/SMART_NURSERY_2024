@@ -56,7 +56,44 @@ namespace SMART_NURSERY_FORMS_2024.FORMS
         //{
         //    WindowState = FormWindowState.Minimized;
         //}
+        private void MAIN_DATA_FRM_Load(object sender, EventArgs e)
+        {
 
+        }
+        public virtual void GET_DATA()
+        {
+
+        }
+        public virtual void INSERT_DATA()
+        {
+
+        }
+        public virtual void UPDATE_DATA()
+        {
+
+        }
+        public virtual void DELETE_DATA()
+        {
+
+        }
+        public virtual void CLEAR_DATA(Control.ControlCollection CONTROLS)
+        {
+            Action<Control.ControlCollection> FUNC = null;
+            FUNC = (controls) =>
+            {
+                foreach (Control control in CONTROLS)
+                    if (control is TextBox)
+                        (control as TextBox).Clear();
+                    else if (control is DateEdit)
+                        (control as DateEdit).DateTime = DateTime.Now;
+                    else if (control is TimeEdit)
+                        (control as TimeEdit).Time = DateTime.Now;
+                    else
+                        FUNC(control.Controls);
+             
+            };
+            FUNC(CONTROLS);
+        }
         private void BTN_SAVE_Click(object sender, EventArgs e)
         {
 
@@ -81,5 +118,7 @@ namespace SMART_NURSERY_FORMS_2024.FORMS
         {
 
         }
+
+
     }
 }

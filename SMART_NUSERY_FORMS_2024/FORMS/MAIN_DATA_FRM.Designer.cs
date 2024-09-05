@@ -307,6 +307,7 @@ namespace SMART_NURSERY_FORMS_2024.FORMS
             this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MAIN_DATA_FRM";
+            this.Load += new System.EventHandler(this.MAIN_DATA_FRM_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
