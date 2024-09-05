@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 
-namespace SMART_NUSERY_FORMS_2024.Properties
+namespace SMART_NURSERY_FORMS_2024.Properties
 {
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.

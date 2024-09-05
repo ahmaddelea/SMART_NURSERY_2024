@@ -1,5 +1,5 @@
 ﻿
-namespace SMART_NUSERY_FORMS_2024.FORMS
+namespace SMART_NURSERY_FORMS_2024.FORMS
 {
     partial class CHILD_FRM
     {

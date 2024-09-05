@@ -1,13 +1,13 @@
 ﻿using DevExpress.LookAndFeel;
 using DevExpress.Skins;
 using DevExpress.UserSkins;
-using SMART_NUSERY_FORMS_2024.FORMS;
+using SMART_NURSERY_FORMS_2024.FORMS;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace SMART_NUSERY_FORMS_2024
+namespace SMART_NURSERY_FORMS_2024
 {
     static class Program
     {

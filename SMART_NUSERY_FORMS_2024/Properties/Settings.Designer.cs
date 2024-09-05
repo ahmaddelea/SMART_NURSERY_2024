@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 
-namespace SMART_NUSERY_FORMS_2024.Properties
+namespace SMART_NURSERY_FORMS_2024.Properties
 {
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "10.0.0.0")]

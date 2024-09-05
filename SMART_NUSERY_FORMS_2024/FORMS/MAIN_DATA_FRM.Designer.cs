@@ -1,5 +1,5 @@
 ﻿
-namespace SMART_NUSERY_FORMS_2024.FORMS
+namespace SMART_NURSERY_FORMS_2024.FORMS
 {
     partial class MAIN_DATA_FRM
     {
@@ -40,12 +40,12 @@ namespace SMART_NUSERY_FORMS_2024.FORMS
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.svgImageBox2 = new DevExpress.XtraEditors.SvgImageBox();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.BTN_GRID = new CMCodeAdvance.CMControls.CMButton();
             this.BTN_CLEAR = new CMCodeAdvance.CMControls.CMButton();
             this.BTN_DELETE = new CMCodeAdvance.CMControls.CMButton();
             this.BTN_EDIT = new CMCodeAdvance.CMControls.CMButton();
             this.BTN_SAVE = new CMCodeAdvance.CMControls.CMButton();
             this.svgImageBox1 = new DevExpress.XtraEditors.SvgImageBox();
-            this.BTN_GRID = new CMCodeAdvance.CMControls.CMButton();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
@@ -152,6 +152,30 @@ namespace SMART_NUSERY_FORMS_2024.FORMS
             this.panelControl2.Size = new System.Drawing.Size(885, 81);
             this.panelControl2.TabIndex = 0;
             // 
+            // BTN_GRID
+            // 
+            this.BTN_GRID.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BTN_GRID.BackColor = System.Drawing.Color.Transparent;
+            this.BTN_GRID.BackgroundColor = System.Drawing.Color.Transparent;
+            this.BTN_GRID.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(34)))), ((int)(((byte)(52)))));
+            this.BTN_GRID.BorderRadius = 20;
+            this.BTN_GRID.BorderSize = 0;
+            this.BTN_GRID.FlatAppearance.BorderSize = 0;
+            this.BTN_GRID.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(153)))), ((int)(((byte)(193)))));
+            this.BTN_GRID.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(188)))), ((int)(((byte)(214)))));
+            this.BTN_GRID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_GRID.Font = new System.Drawing.Font("AF_Najed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.BTN_GRID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(34)))), ((int)(((byte)(52)))));
+            this.BTN_GRID.Image = ((System.Drawing.Image)(resources.GetObject("BTN_GRID.Image")));
+            this.BTN_GRID.Location = new System.Drawing.Point(45, 13);
+            this.BTN_GRID.Name = "BTN_GRID";
+            this.BTN_GRID.Size = new System.Drawing.Size(58, 55);
+            this.BTN_GRID.TabIndex = 0;
+            this.BTN_GRID.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(34)))), ((int)(((byte)(52)))));
+            this.BTN_GRID.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BTN_GRID.UseVisualStyleBackColor = false;
+            this.BTN_GRID.Click += new System.EventHandler(this.BTN_GRID_Click);
+            // 
             // BTN_CLEAR
             // 
             this.BTN_CLEAR.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -175,6 +199,7 @@ namespace SMART_NUSERY_FORMS_2024.FORMS
             this.BTN_CLEAR.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(34)))), ((int)(((byte)(52)))));
             this.BTN_CLEAR.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BTN_CLEAR.UseVisualStyleBackColor = false;
+            this.BTN_CLEAR.Click += new System.EventHandler(this.BTN_CLEAR_Click);
             // 
             // BTN_DELETE
             // 
@@ -199,6 +224,7 @@ namespace SMART_NUSERY_FORMS_2024.FORMS
             this.BTN_DELETE.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(34)))), ((int)(((byte)(52)))));
             this.BTN_DELETE.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BTN_DELETE.UseVisualStyleBackColor = false;
+            this.BTN_DELETE.Click += new System.EventHandler(this.BTN_DELETE_Click);
             // 
             // BTN_EDIT
             // 
@@ -223,6 +249,7 @@ namespace SMART_NUSERY_FORMS_2024.FORMS
             this.BTN_EDIT.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(34)))), ((int)(((byte)(52)))));
             this.BTN_EDIT.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BTN_EDIT.UseVisualStyleBackColor = false;
+            this.BTN_EDIT.Click += new System.EventHandler(this.BTN_EDIT_Click);
             // 
             // BTN_SAVE
             // 
@@ -247,6 +274,7 @@ namespace SMART_NUSERY_FORMS_2024.FORMS
             this.BTN_SAVE.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(34)))), ((int)(((byte)(52)))));
             this.BTN_SAVE.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BTN_SAVE.UseVisualStyleBackColor = false;
+            this.BTN_SAVE.Click += new System.EventHandler(this.BTN_SAVE_Click);
             // 
             // svgImageBox1
             // 
@@ -258,29 +286,6 @@ namespace SMART_NUSERY_FORMS_2024.FORMS
             this.svgImageBox1.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageBox1.SvgImage")));
             this.svgImageBox1.TabIndex = 1;
             this.svgImageBox1.Text = "svgImageBox1";
-            // 
-            // BTN_GRID
-            // 
-            this.BTN_GRID.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.BTN_GRID.BackColor = System.Drawing.Color.Transparent;
-            this.BTN_GRID.BackgroundColor = System.Drawing.Color.Transparent;
-            this.BTN_GRID.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(34)))), ((int)(((byte)(52)))));
-            this.BTN_GRID.BorderRadius = 20;
-            this.BTN_GRID.BorderSize = 0;
-            this.BTN_GRID.FlatAppearance.BorderSize = 0;
-            this.BTN_GRID.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(153)))), ((int)(((byte)(193)))));
-            this.BTN_GRID.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(188)))), ((int)(((byte)(214)))));
-            this.BTN_GRID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_GRID.Font = new System.Drawing.Font("AF_Najed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.BTN_GRID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(34)))), ((int)(((byte)(52)))));
-            this.BTN_GRID.Image = ((System.Drawing.Image)(resources.GetObject("BTN_GRID.Image")));
-            this.BTN_GRID.Location = new System.Drawing.Point(45, 13);
-            this.BTN_GRID.Name = "BTN_GRID";
-            this.BTN_GRID.Size = new System.Drawing.Size(58, 55);
-            this.BTN_GRID.TabIndex = 0;
-            this.BTN_GRID.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(34)))), ((int)(((byte)(52)))));
-            this.BTN_GRID.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BTN_GRID.UseVisualStyleBackColor = false;
             // 
             // MAIN_DATA_FRM
             // 
