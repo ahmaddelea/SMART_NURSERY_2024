@@ -42,7 +42,9 @@
     <Reference Include="DevExpress.XtraBars.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v19.2" />
     <Reference Include="DevExpress.Printing.v19.2.Core" />
+    <Reference Include="DevExpress.XtraGrid.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="FontAwesome.Sharp, Version=6.6.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.6.6.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
@@ -80,6 +82,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DATA_GRID_FORMS\CLD_GRID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DATA_GRID_FORMS\CLD_GRID.Designer.cs">
+      <DependentUpon>CLD_GRID.cs</DependentUpon>
+    </Compile>
     <Compile Include="FORMS\CHILD_FRM.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +108,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DATA_GRID_FORMS\CLD_GRID.resx">
+      <DependentUpon>CLD_GRID.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FORMS\CHILD_FRM.resx">
       <DependentUpon>CHILD_FRM.cs</DependentUpon>
     </EmbeddedResource>

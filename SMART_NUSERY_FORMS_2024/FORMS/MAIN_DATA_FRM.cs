@@ -66,18 +66,30 @@ namespace SMART_NURSERY_FORMS_2024.FORMS
         }
         public virtual void INSERT_DATA()
         {
-
+            LBL_CHANGE.Text = "تم الادخال بنجاح";
+            LBL_CHANGE.ForeColor = Color.LimeGreen;
         }
         public virtual void UPDATE_DATA()
         {
-
+            LBL_CHANGE.Text = "تم التعديل البيانات بنجاح";
+            LBL_CHANGE.ForeColor = Color.LimeGreen;
         }
-        public virtual void DELETE_DATA()
+        public virtual string DELETE_DATA()
         {
+            DialogResult DR = MessageBox.Show("هل تريد حذف البيانات؟", "!! تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (DR == DialogResult.Yes)
+            {
+                return "TRUE";
+            }
 
+            else
+            {
+                return "FALSE";
+            }
         }
         public virtual void CLEAR_DATA(Control.ControlCollection CONTROLS)
         {
+            LBL_CHANGE.Text = "";
             Action<Control.ControlCollection> FUNC = null;
             FUNC = (controls) =>
             {
@@ -96,22 +108,22 @@ namespace SMART_NURSERY_FORMS_2024.FORMS
         }
         private void BTN_SAVE_Click(object sender, EventArgs e)
         {
-
+            INSERT_DATA();
         }
 
         private void BTN_EDIT_Click(object sender, EventArgs e)
         {
-
+            UPDATE_DATA();
         }
 
         private void BTN_DELETE_Click(object sender, EventArgs e)
         {
-
+            DELETE_DATA();
         }
 
         private void BTN_CLEAR_Click(object sender, EventArgs e)
         {
-
+            CLEAR_DATA(this.Controls);
         }
 
         private void BTN_GRID_Click(object sender, EventArgs e)

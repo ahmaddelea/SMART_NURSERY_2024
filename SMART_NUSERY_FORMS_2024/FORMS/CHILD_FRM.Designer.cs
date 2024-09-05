@@ -36,11 +36,10 @@ namespace SMART_NURSERY_FORMS_2024.FORMS
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl8 = new DevExpress.XtraEditors.PanelControl();
+            this.cmButton1 = new CMCodeAdvance.CMControls.CMButton();
             this.CMB_PAR_NAME = new Guna.UI2.WinForms.Guna2ComboBox();
             this.CMB_PAR_ID = new Guna.UI2.WinForms.Guna2ComboBox();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.panelControl12 = new DevExpress.XtraEditors.PanelControl();
-            this.LBL_CHANGE = new DevExpress.XtraEditors.LabelControl();
             this.panelControl11 = new DevExpress.XtraEditors.PanelControl();
             this.TXT_CLD_LVL = new Guna.UI2.WinForms.Guna2TextBox();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
@@ -66,7 +65,10 @@ namespace SMART_NURSERY_FORMS_2024.FORMS
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup6 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.cmButton1 = new CMCodeAdvance.CMControls.CMButton();
+            this.LBL_CHANGE = new DevExpress.XtraEditors.LabelControl();
+            this.panelControl12 = new DevExpress.XtraEditors.PanelControl();
+            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
+            this.CHK_M_STATE = new Guna.UI2.WinForms.Guna2CustomCheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             this.panelContainer.SuspendLayout();
@@ -74,8 +76,6 @@ namespace SMART_NURSERY_FORMS_2024.FORMS
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl8)).BeginInit();
             this.panelControl8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl12)).BeginInit();
-            this.panelControl12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl11)).BeginInit();
             this.panelControl11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl10)).BeginInit();
@@ -95,6 +95,8 @@ namespace SMART_NURSERY_FORMS_2024.FORMS
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl12)).BeginInit();
+            this.panelControl12.SuspendLayout();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -107,7 +109,7 @@ namespace SMART_NURSERY_FORMS_2024.FORMS
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(716, 328, 650, 400);
             this.layoutControl1.OptionsView.RightToLeftMirroringApplied = true;
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(1274, 590);
+            this.layoutControl1.Size = new System.Drawing.Size(1274, 564);
             this.layoutControl1.TabIndex = 13;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -122,7 +124,7 @@ namespace SMART_NURSERY_FORMS_2024.FORMS
             this.panelContainer.Location = new System.Drawing.Point(2, 2);
             this.panelContainer.Name = "panelContainer";
             this.panelContainer.ShadowColor = System.Drawing.Color.Black;
-            this.panelContainer.Size = new System.Drawing.Size(632, 586);
+            this.panelContainer.Size = new System.Drawing.Size(632, 560);
             this.panelContainer.TabIndex = 5;
             // 
             // labelControl9
@@ -151,7 +153,7 @@ namespace SMART_NURSERY_FORMS_2024.FORMS
             this.labelControl8.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.labelControl8.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.labelControl8.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.labelControl8.Location = new System.Drawing.Point(0, 528);
+            this.labelControl8.Location = new System.Drawing.Point(0, 502);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(632, 58);
             this.labelControl8.TabIndex = 24;
@@ -161,8 +163,8 @@ namespace SMART_NURSERY_FORMS_2024.FORMS
             // 
             this.panelControl1.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.panelControl1.Appearance.Options.UseBackColor = true;
-            this.panelControl1.Controls.Add(this.panelControl8);
             this.panelControl1.Controls.Add(this.panelControl12);
+            this.panelControl1.Controls.Add(this.panelControl8);
             this.panelControl1.Controls.Add(this.panelControl11);
             this.panelControl1.Controls.Add(this.panelControl10);
             this.panelControl1.Controls.Add(this.panelControl9);
@@ -172,7 +174,7 @@ namespace SMART_NURSERY_FORMS_2024.FORMS
             this.panelControl1.Controls.Add(this.panelControl4);
             this.panelControl1.Location = new System.Drawing.Point(638, 2);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(634, 586);
+            this.panelControl1.Size = new System.Drawing.Size(634, 560);
             this.panelControl1.TabIndex = 4;
             // 
             // panelControl8
@@ -189,6 +191,29 @@ namespace SMART_NURSERY_FORMS_2024.FORMS
             this.panelControl8.Name = "panelControl8";
             this.panelControl8.Size = new System.Drawing.Size(630, 56);
             this.panelControl8.TabIndex = 0;
+            // 
+            // cmButton1
+            // 
+            this.cmButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmButton1.BackColor = System.Drawing.Color.Transparent;
+            this.cmButton1.BackgroundColor = System.Drawing.Color.Transparent;
+            this.cmButton1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(34)))), ((int)(((byte)(52)))));
+            this.cmButton1.BorderRadius = 20;
+            this.cmButton1.BorderSize = 0;
+            this.cmButton1.FlatAppearance.BorderSize = 0;
+            this.cmButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(153)))), ((int)(((byte)(193)))));
+            this.cmButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(188)))), ((int)(((byte)(214)))));
+            this.cmButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmButton1.Font = new System.Drawing.Font("AF_Najed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.cmButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(34)))), ((int)(((byte)(52)))));
+            this.cmButton1.Image = ((System.Drawing.Image)(resources.GetObject("cmButton1.Image")));
+            this.cmButton1.Location = new System.Drawing.Point(36, 4);
+            this.cmButton1.Name = "cmButton1";
+            this.cmButton1.Size = new System.Drawing.Size(43, 43);
+            this.cmButton1.TabIndex = 28;
+            this.cmButton1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(34)))), ((int)(((byte)(52)))));
+            this.cmButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.cmButton1.UseVisualStyleBackColor = false;
             // 
             // CMB_PAR_NAME
             // 
@@ -253,33 +278,6 @@ namespace SMART_NURSERY_FORMS_2024.FORMS
             this.labelControl7.Size = new System.Drawing.Size(103, 47);
             this.labelControl7.TabIndex = 2;
             this.labelControl7.Text = "رقم العائلة";
-            // 
-            // panelControl12
-            // 
-            this.panelControl12.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.panelControl12.Appearance.Options.UseBackColor = true;
-            this.panelControl12.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl12.Controls.Add(this.LBL_CHANGE);
-            this.panelControl12.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl12.Location = new System.Drawing.Point(2, 528);
-            this.panelControl12.Name = "panelControl12";
-            this.panelControl12.Size = new System.Drawing.Size(630, 56);
-            this.panelControl12.TabIndex = 0;
-            // 
-            // LBL_CHANGE
-            // 
-            this.LBL_CHANGE.Appearance.Font = new System.Drawing.Font("Arabic Typesetting", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBL_CHANGE.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(159)))));
-            this.LBL_CHANGE.Appearance.Options.UseFont = true;
-            this.LBL_CHANGE.Appearance.Options.UseForeColor = true;
-            this.LBL_CHANGE.Appearance.Options.UseTextOptions = true;
-            this.LBL_CHANGE.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.LBL_CHANGE.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.LBL_CHANGE.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LBL_CHANGE.Location = new System.Drawing.Point(0, 0);
-            this.LBL_CHANGE.Name = "LBL_CHANGE";
-            this.LBL_CHANGE.Size = new System.Drawing.Size(630, 56);
-            this.LBL_CHANGE.TabIndex = 38;
             // 
             // panelControl11
             // 
@@ -651,7 +649,7 @@ namespace SMART_NURSERY_FORMS_2024.FORMS
             this.layoutControlGroup6});
             this.Root.Name = "Root";
             this.Root.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.Root.Size = new System.Drawing.Size(1274, 590);
+            this.Root.Size = new System.Drawing.Size(1274, 564);
             this.Root.TextVisible = false;
             // 
             // layoutControlGroup10
@@ -663,14 +661,14 @@ namespace SMART_NURSERY_FORMS_2024.FORMS
             this.layoutControlGroup10.Location = new System.Drawing.Point(636, 0);
             this.layoutControlGroup10.Name = "layoutControlGroup10";
             this.layoutControlGroup10.Padding = new DevExpress.XtraLayout.Utils.Padding(9, 9, 9, 9);
-            this.layoutControlGroup10.Size = new System.Drawing.Size(638, 590);
+            this.layoutControlGroup10.Size = new System.Drawing.Size(638, 564);
             // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.panelControl1;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(638, 590);
+            this.layoutControlItem1.Size = new System.Drawing.Size(638, 564);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
@@ -685,39 +683,82 @@ namespace SMART_NURSERY_FORMS_2024.FORMS
             this.layoutControlGroup6.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup6.Name = "layoutControlGroup6";
             this.layoutControlGroup6.Padding = new DevExpress.XtraLayout.Utils.Padding(9, 9, 9, 9);
-            this.layoutControlGroup6.Size = new System.Drawing.Size(636, 590);
+            this.layoutControlGroup6.Size = new System.Drawing.Size(636, 564);
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.panelContainer;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(636, 590);
+            this.layoutControlItem2.Size = new System.Drawing.Size(636, 564);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
-            // cmButton1
+            // LBL_CHANGE
             // 
-            this.cmButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cmButton1.BackColor = System.Drawing.Color.Transparent;
-            this.cmButton1.BackgroundColor = System.Drawing.Color.Transparent;
-            this.cmButton1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(34)))), ((int)(((byte)(52)))));
-            this.cmButton1.BorderRadius = 20;
-            this.cmButton1.BorderSize = 0;
-            this.cmButton1.FlatAppearance.BorderSize = 0;
-            this.cmButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(153)))), ((int)(((byte)(193)))));
-            this.cmButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(188)))), ((int)(((byte)(214)))));
-            this.cmButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmButton1.Font = new System.Drawing.Font("AF_Najed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.cmButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(34)))), ((int)(((byte)(52)))));
-            this.cmButton1.Image = ((System.Drawing.Image)(resources.GetObject("cmButton1.Image")));
-            this.cmButton1.Location = new System.Drawing.Point(36, 4);
-            this.cmButton1.Name = "cmButton1";
-            this.cmButton1.Size = new System.Drawing.Size(43, 43);
-            this.cmButton1.TabIndex = 28;
-            this.cmButton1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(34)))), ((int)(((byte)(52)))));
-            this.cmButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.cmButton1.UseVisualStyleBackColor = false;
+            this.LBL_CHANGE.Appearance.Font = new System.Drawing.Font("Arabic Typesetting", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBL_CHANGE.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(159)))));
+            this.LBL_CHANGE.Appearance.Options.UseFont = true;
+            this.LBL_CHANGE.Appearance.Options.UseForeColor = true;
+            this.LBL_CHANGE.Appearance.Options.UseTextOptions = true;
+            this.LBL_CHANGE.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.LBL_CHANGE.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.LBL_CHANGE.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LBL_CHANGE.Location = new System.Drawing.Point(0, 0);
+            this.LBL_CHANGE.Name = "LBL_CHANGE";
+            this.LBL_CHANGE.Size = new System.Drawing.Size(630, 56);
+            this.LBL_CHANGE.TabIndex = 38;
+            // 
+            // panelControl12
+            // 
+            this.panelControl12.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.panelControl12.Appearance.Options.UseBackColor = true;
+            this.panelControl12.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl12.Controls.Add(this.CHK_M_STATE);
+            this.panelControl12.Controls.Add(this.labelControl10);
+            this.panelControl12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelControl12.Location = new System.Drawing.Point(2, 450);
+            this.panelControl12.Name = "panelControl12";
+            this.panelControl12.Size = new System.Drawing.Size(630, 56);
+            this.panelControl12.TabIndex = 1;
+            // 
+            // labelControl10
+            // 
+            this.labelControl10.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelControl10.Appearance.Font = new System.Drawing.Font("AF_Najed", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.labelControl10.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(34)))), ((int)(((byte)(52)))));
+            this.labelControl10.Appearance.Options.UseFont = true;
+            this.labelControl10.Appearance.Options.UseForeColor = true;
+            this.labelControl10.Location = new System.Drawing.Point(557, 4);
+            this.labelControl10.Name = "labelControl10";
+            this.labelControl10.Padding = new System.Windows.Forms.Padding(10);
+            this.labelControl10.Size = new System.Drawing.Size(63, 47);
+            this.labelControl10.TabIndex = 2;
+            this.labelControl10.Text = "الحالة";
+            // 
+            // CHK_M_STATE
+            // 
+            this.CHK_M_STATE.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.CHK_M_STATE.Animated = true;
+            this.CHK_M_STATE.BackColor = System.Drawing.Color.Transparent;
+            this.CHK_M_STATE.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CHK_M_STATE.CheckedState.BorderRadius = 7;
+            this.CHK_M_STATE.CheckedState.BorderThickness = 2;
+            this.CHK_M_STATE.CheckedState.FillColor = System.Drawing.SystemColors.ControlLight;
+            this.CHK_M_STATE.CheckMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CHK_M_STATE.Location = new System.Drawing.Point(448, 13);
+            this.CHK_M_STATE.Name = "CHK_M_STATE";
+            this.CHK_M_STATE.ShadowDecoration.BorderRadius = 7;
+            this.CHK_M_STATE.ShadowDecoration.Enabled = true;
+            this.CHK_M_STATE.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(5, 0, 0, 5);
+            this.CHK_M_STATE.Size = new System.Drawing.Size(31, 31);
+            this.CHK_M_STATE.TabIndex = 55;
+            this.CHK_M_STATE.Text = "guna2CustomCheckBox1";
+            this.CHK_M_STATE.UncheckedState.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.CHK_M_STATE.UncheckedState.BorderRadius = 7;
+            this.CHK_M_STATE.UncheckedState.BorderThickness = 2;
+            this.CHK_M_STATE.UncheckedState.FillColor = System.Drawing.SystemColors.ControlLight;
+            this.CHK_M_STATE.UseTransparentBackground = true;
             // 
             // CHILD_FRM
             // 
@@ -731,6 +772,7 @@ namespace SMART_NURSERY_FORMS_2024.FORMS
             this.Controls.Add(this.layoutControl1);
             this.Name = "CHILD_FRM";
             this.Text = "CHILD_FRM";
+            this.Load += new System.EventHandler(this.CHILD_FRM_Load);
             this.Controls.SetChildIndex(this.layoutControl1, 0);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
@@ -740,8 +782,6 @@ namespace SMART_NURSERY_FORMS_2024.FORMS
             ((System.ComponentModel.ISupportInitialize)(this.panelControl8)).EndInit();
             this.panelControl8.ResumeLayout(false);
             this.panelControl8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl12)).EndInit();
-            this.panelControl12.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl11)).EndInit();
             this.panelControl11.ResumeLayout(false);
             this.panelControl11.PerformLayout();
@@ -767,6 +807,9 @@ namespace SMART_NURSERY_FORMS_2024.FORMS
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl12)).EndInit();
+            this.panelControl12.ResumeLayout(false);
+            this.panelControl12.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -778,7 +821,6 @@ namespace SMART_NURSERY_FORMS_2024.FORMS
         private DevExpress.XtraLayout.LayoutControlGroup Root;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.PanelControl panelControl8;
-        private DevExpress.XtraEditors.PanelControl panelControl12;
         private DevExpress.XtraEditors.PanelControl panelControl11;
         private DevExpress.XtraEditors.PanelControl panelControl10;
         private DevExpress.XtraEditors.PanelControl panelControl9;
@@ -794,7 +836,6 @@ namespace SMART_NURSERY_FORMS_2024.FORMS
         private Guna.UI2.WinForms.Guna2ComboBox CMB_PAR_NAME;
         private Guna.UI2.WinForms.Guna2ComboBox CMB_PAR_ID;
         private DevExpress.XtraEditors.LabelControl labelControl7;
-        private DevExpress.XtraEditors.LabelControl LBL_CHANGE;
         private Guna.UI2.WinForms.Guna2TextBox TXT_CLD_LVL;
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private Guna.UI2.WinForms.Guna2ComboBox CMB_CLD_GEN;
@@ -811,5 +852,9 @@ namespace SMART_NURSERY_FORMS_2024.FORMS
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraEditors.LabelControl labelControl9;
         private CMCodeAdvance.CMControls.CMButton cmButton1;
+        private DevExpress.XtraEditors.LabelControl LBL_CHANGE;
+        private DevExpress.XtraEditors.PanelControl panelControl12;
+        private DevExpress.XtraEditors.LabelControl labelControl10;
+        private Guna.UI2.WinForms.Guna2CustomCheckBox CHK_M_STATE;
     }
 }

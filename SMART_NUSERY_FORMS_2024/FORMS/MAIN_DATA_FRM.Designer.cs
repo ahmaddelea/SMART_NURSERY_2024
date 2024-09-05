@@ -46,6 +46,7 @@ namespace SMART_NURSERY_FORMS_2024.FORMS
             this.BTN_EDIT = new CMCodeAdvance.CMControls.CMButton();
             this.BTN_SAVE = new CMCodeAdvance.CMControls.CMButton();
             this.svgImageBox1 = new DevExpress.XtraEditors.SvgImageBox();
+            this.LBL_CHANGE = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
@@ -103,9 +104,9 @@ namespace SMART_NURSERY_FORMS_2024.FORMS
             this.panelControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl3.Controls.Add(this.tableLayoutPanel3);
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl3.Location = new System.Drawing.Point(0, 590);
+            this.panelControl3.Location = new System.Drawing.Point(0, 564);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(1274, 87);
+            this.panelControl3.Size = new System.Drawing.Size(1274, 113);
             this.panelControl3.TabIndex = 8;
             // 
             // tableLayoutPanel3
@@ -122,7 +123,7 @@ namespace SMART_NURSERY_FORMS_2024.FORMS
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1274, 87);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1274, 113);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
             // svgImageBox2
@@ -130,7 +131,7 @@ namespace SMART_NURSERY_FORMS_2024.FORMS
             this.svgImageBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.svgImageBox2.Location = new System.Drawing.Point(3, 3);
             this.svgImageBox2.Name = "svgImageBox2";
-            this.svgImageBox2.Size = new System.Drawing.Size(186, 81);
+            this.svgImageBox2.Size = new System.Drawing.Size(186, 107);
             this.svgImageBox2.SizeMode = DevExpress.XtraEditors.SvgImageSizeMode.Zoom;
             this.svgImageBox2.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageBox2.SvgImage")));
             this.svgImageBox2.TabIndex = 1;
@@ -141,6 +142,7 @@ namespace SMART_NURSERY_FORMS_2024.FORMS
             this.panelControl2.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.panelControl2.Appearance.Options.UseBackColor = true;
             this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl2.Controls.Add(this.LBL_CHANGE);
             this.panelControl2.Controls.Add(this.BTN_GRID);
             this.panelControl2.Controls.Add(this.BTN_CLEAR);
             this.panelControl2.Controls.Add(this.BTN_DELETE);
@@ -149,7 +151,7 @@ namespace SMART_NURSERY_FORMS_2024.FORMS
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Location = new System.Drawing.Point(195, 3);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(885, 81);
+            this.panelControl2.Size = new System.Drawing.Size(885, 107);
             this.panelControl2.TabIndex = 0;
             // 
             // BTN_GRID
@@ -167,7 +169,7 @@ namespace SMART_NURSERY_FORMS_2024.FORMS
             this.BTN_GRID.Font = new System.Drawing.Font("AF_Najed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.BTN_GRID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(34)))), ((int)(((byte)(52)))));
             this.BTN_GRID.Image = ((System.Drawing.Image)(resources.GetObject("BTN_GRID.Image")));
-            this.BTN_GRID.Location = new System.Drawing.Point(45, 13);
+            this.BTN_GRID.Location = new System.Drawing.Point(45, 40);
             this.BTN_GRID.Name = "BTN_GRID";
             this.BTN_GRID.Size = new System.Drawing.Size(58, 55);
             this.BTN_GRID.TabIndex = 0;
@@ -191,7 +193,7 @@ namespace SMART_NURSERY_FORMS_2024.FORMS
             this.BTN_CLEAR.Font = new System.Drawing.Font("AF_Najed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.BTN_CLEAR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(34)))), ((int)(((byte)(52)))));
             this.BTN_CLEAR.Image = ((System.Drawing.Image)(resources.GetObject("BTN_CLEAR.Image")));
-            this.BTN_CLEAR.Location = new System.Drawing.Point(159, 8);
+            this.BTN_CLEAR.Location = new System.Drawing.Point(159, 35);
             this.BTN_CLEAR.Name = "BTN_CLEAR";
             this.BTN_CLEAR.Size = new System.Drawing.Size(119, 64);
             this.BTN_CLEAR.TabIndex = 0;
@@ -216,7 +218,7 @@ namespace SMART_NURSERY_FORMS_2024.FORMS
             this.BTN_DELETE.Font = new System.Drawing.Font("AF_Najed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.BTN_DELETE.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(34)))), ((int)(((byte)(52)))));
             this.BTN_DELETE.Image = ((System.Drawing.Image)(resources.GetObject("BTN_DELETE.Image")));
-            this.BTN_DELETE.Location = new System.Drawing.Point(308, 8);
+            this.BTN_DELETE.Location = new System.Drawing.Point(308, 35);
             this.BTN_DELETE.Name = "BTN_DELETE";
             this.BTN_DELETE.Size = new System.Drawing.Size(119, 64);
             this.BTN_DELETE.TabIndex = 0;
@@ -241,7 +243,7 @@ namespace SMART_NURSERY_FORMS_2024.FORMS
             this.BTN_EDIT.Font = new System.Drawing.Font("AF_Najed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.BTN_EDIT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(34)))), ((int)(((byte)(52)))));
             this.BTN_EDIT.Image = ((System.Drawing.Image)(resources.GetObject("BTN_EDIT.Image")));
-            this.BTN_EDIT.Location = new System.Drawing.Point(457, 8);
+            this.BTN_EDIT.Location = new System.Drawing.Point(457, 35);
             this.BTN_EDIT.Name = "BTN_EDIT";
             this.BTN_EDIT.Size = new System.Drawing.Size(119, 64);
             this.BTN_EDIT.TabIndex = 0;
@@ -266,7 +268,7 @@ namespace SMART_NURSERY_FORMS_2024.FORMS
             this.BTN_SAVE.Font = new System.Drawing.Font("AF_Najed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.BTN_SAVE.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(34)))), ((int)(((byte)(52)))));
             this.BTN_SAVE.Image = ((System.Drawing.Image)(resources.GetObject("BTN_SAVE.Image")));
-            this.BTN_SAVE.Location = new System.Drawing.Point(606, 8);
+            this.BTN_SAVE.Location = new System.Drawing.Point(606, 35);
             this.BTN_SAVE.Name = "BTN_SAVE";
             this.BTN_SAVE.Size = new System.Drawing.Size(119, 64);
             this.BTN_SAVE.TabIndex = 0;
@@ -281,11 +283,27 @@ namespace SMART_NURSERY_FORMS_2024.FORMS
             this.svgImageBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.svgImageBox1.Location = new System.Drawing.Point(1086, 3);
             this.svgImageBox1.Name = "svgImageBox1";
-            this.svgImageBox1.Size = new System.Drawing.Size(185, 81);
+            this.svgImageBox1.Size = new System.Drawing.Size(185, 107);
             this.svgImageBox1.SizeMode = DevExpress.XtraEditors.SvgImageSizeMode.Zoom;
             this.svgImageBox1.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageBox1.SvgImage")));
             this.svgImageBox1.TabIndex = 1;
             this.svgImageBox1.Text = "svgImageBox1";
+            // 
+            // LBL_CHANGE
+            // 
+            this.LBL_CHANGE.Appearance.Font = new System.Drawing.Font("Arabic Typesetting", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBL_CHANGE.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(159)))));
+            this.LBL_CHANGE.Appearance.Options.UseFont = true;
+            this.LBL_CHANGE.Appearance.Options.UseForeColor = true;
+            this.LBL_CHANGE.Appearance.Options.UseTextOptions = true;
+            this.LBL_CHANGE.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.LBL_CHANGE.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.LBL_CHANGE.Dock = System.Windows.Forms.DockStyle.Top;
+            this.LBL_CHANGE.Location = new System.Drawing.Point(0, 0);
+            this.LBL_CHANGE.Name = "LBL_CHANGE";
+            this.LBL_CHANGE.Size = new System.Drawing.Size(885, 35);
+            this.LBL_CHANGE.TabIndex = 39;
+            this.LBL_CHANGE.Text = "INSERT DATA";
             // 
             // MAIN_DATA_FRM
             // 
@@ -338,5 +356,6 @@ namespace SMART_NURSERY_FORMS_2024.FORMS
         private CMCodeAdvance.CMControls.CMButton BTN_SAVE;
         private DevExpress.XtraEditors.SvgImageBox svgImageBox1;
         private CMCodeAdvance.CMControls.CMButton BTN_GRID;
+        private DevExpress.XtraEditors.LabelControl LBL_CHANGE;
     }
 }
